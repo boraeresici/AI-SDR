@@ -4,7 +4,7 @@ Bu rehber, AI-SDR skill'lerinin hangi sirayla ve hangi cumle kaliplariyla kullan
 
 ## 1) Hızlı Başlangıç Akışı
 
-1. `loop-master-orchestrator` ile sureci baslat.
+1. `loop-master-orchestrator` ile sureci baslat ve domain secimi yap.
 2. `architect-decision-matrix` ile 2+ opsiyon ve onay al.
 3. `pm-context-scope` ile scope/AC/DoD paketini kilitle.
 4. `ux-design-system` ile UI kisitlarini netlestir.
@@ -23,6 +23,7 @@ Bu rehber, AI-SDR skill'lerinin hangi sirayla ve hangi cumle kaliplariyla kullan
 ### Blueprint Loop
 - Skilller: `loop-master-orchestrator`, `architect-decision-matrix`, `pm-context-scope`
 - Cikti: onayli kontrat + scope paketi
+- Not: Loop Master bu fazin basinda `Domain Constraint Pre-check` calistirir.
 
 ### Build Loop
 - Skilller: `ux-design-system`, `fullstack-implementation-refactor`
@@ -39,7 +40,7 @@ Bu rehber, AI-SDR skill'lerinin hangi sirayla ve hangi cumle kaliplariyla kullan
 ## 3) Ornek Kullanım Cumleleri
 
 ### Orkestrasyon
-- `Loop Master, yeni ozellik icin Blueprint Loop'u strict mode baslat.`
+- `Loop Master, yeni ozellik icin Blueprint Loop'u strict mode baslat. Domain: domains/INDEX.md uzerinden sec.`
 - `Loop Master, su anki fazi degerlendir ve gate pass/block kararini ver.`
 
 ### Mimari Karar
@@ -115,9 +116,9 @@ Not:
 
 ## 6) Quick Commands (Copy-Paste)
 
-1. `Loop Master, [fikir/özellik/dosya adı] için Blueprint Loop'u strict mode başlat. Hedef: [...]. Kapsam: [...]. Başarı metriği: [...].`
+1. `Loop Master, [fikir/özellik/dosya adı] için Blueprint Loop'u strict mode başlat. Domain: [domains/*.md]. Hedef: [...]. Kapsam: [...]. Başarı metriği: [...].`
    Ornek:
-   `Loop Master, 60 yaş üstü için hayatı kolaylaştıracak uygulama fikri için Blueprint Loop'u strict mode başlat. Hedef: kullanımı kolay, anlaşılır bir uygulama olması ve 60 yaş üstünün rahat kullanabilmesi. Kapsam: ilaç hatırlatma, doktor randevu takibi, acil durumda tek tuşla yakına haber verme, büyük yazı tipi ve sesli yönlendirme. Başarı metriği: 4 hafta içinde pilot kullanıcıların en az %70'i temel görevleri (hatırlatma kurma, randevu ekleme, acil arama) yardımsız tamamlayabilmeli; görev tamamlama süresi ortalama 2 dakikanın altında olmalı; memnuniyet skoru en az 4/5 olmalı.`
+   `Loop Master, 60 yaş üstü için hayatı kolaylaştıracak uygulama fikri için Blueprint Loop'u strict mode başlat. Domain: domains/senior-care.md. Hedef: kullanımı kolay, anlaşılır bir uygulama olması ve 60 yaş üstünün rahat kullanabilmesi. Kapsam: ilaç hatırlatma, doktor randevu takibi, acil durumda tek tuşla yakına haber verme, büyük yazı tipi ve sesli yönlendirme. Başarı metriği: 4 hafta içinde pilot kullanıcıların en az %70'i temel görevleri (hatırlatma kurma, randevu ekleme, acil arama) yardımsız tamamlayabilmeli; görev tamamlama süresi ortalama 2 dakikanın altında olmalı; memnuniyet skoru en az 4/5 olmalı.`
 2. `Architect, [özellik adı] için MVP modu bazlı 2 seçenekli decision matrix hazırla ve Onaylıyor musunuz diye sor.`
 3. `PM, [özellik adı] için scope-pack oluştur; MoSCoW uygula ve Must oranını %60 altında tut.`
 4. `Designer, [ekran/akış adı] için ui-constraints üret; WCAG 2.1 AA ve 375/768/1024/1440 breakpoints zorunlu olsun.`

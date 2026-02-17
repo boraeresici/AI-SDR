@@ -20,6 +20,9 @@ Required:
 - Auth/security scheme and role-permission table
 - Data schema diagram (`Mermaid ERD`)
 - Artifact workspace root (default): `artifacts/YYYY-MM-DD/<phase>/`
+- Domain selector and reference:
+  - `domains/INDEX.md`
+  - selected domain document (e.g., `domains/senior-care.md`)
 
 Optional:
 - Risk register
@@ -29,16 +32,27 @@ Optional:
 
 # Output Contract
 - `artifacts/YYYY-MM-DD/<phase>/phase-gate-report.md`
-  - Required headings: `Current Phase`, `Gate Checks`, `Decision`, `Blocking Issues`, `Next Step`, `Next Skill`, `Suggested Command`
+  - Required headings: `Current Phase`, `Domain Pre-check`, `Gate Checks`, `Decision`, `Blocking Issues`, `Next Step`, `Next Skill`, `Suggested Command`
 - `artifacts/YYYY-MM-DD/<phase>/rollback-decision.md` (only if rollback triggered)
   - Required headings: `Trigger`, `Reason`, `Required Blueprint Changes`, `Resume Criteria`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Detect requested action and current phase.
-2. Validate required artifacts for phase entry.
-3. Run role checks in order: Strategist -> Analyst -> Architect -> PM -> Designer -> Developer -> QA -> DevOps -> Investor (as phase requires).
-4. Enforce gate: pass, block, or rollback.
-5. Publish immutable handoff package for next phase.
+2. Run Domain Constraint Pre-check on idea/feature input.
+3. Validate required artifacts for phase entry.
+4. Run role checks in order: Strategist -> Analyst -> Architect -> PM -> Designer -> Developer -> QA -> DevOps -> Investor (as phase requires).
+5. Enforce gate: pass, block, or rollback.
+6. Publish immutable handoff package for next phase.
+
+Domain Constraint Pre-check:
+- Infer/select domain using `domains/INDEX.md`.
+- Load selected domain doc and evaluate:
+  - `Requirement Conflict Policy`
+  - `Regülasyon Katmanı`
+  - `Persona Katmanı`
+  - `Hata Tolerans Katmanı`
+  - `No-Go List`
+- If idea/feature conflicts with domain redlines, return `BLOCK` with required corrections before Architect step.
 
 Trigger-to-Skill Mapping (embedded):
 - `hardening:contract-check` -> `contract-compat-check`
@@ -57,6 +71,7 @@ Default:
 - No phase transition without all required artifacts.
 - Architect proposes phase mode weights; user override wins.
 - Trigger-to-skill routing uses the embedded mapping table as source of truth.
+- Domain Constraint Pre-check must pass before Blueprint continues.
 
 No-Go:
 - Build phase reveals new table or API contract not in blueprint.
@@ -67,6 +82,7 @@ Exception:
 - Emergency hotfix path allowed only if user explicitly approves reduced gates.
 
 # Quality Gates
+- `Domain Pre-check`: 100% pass for domain redlines before Blueprint role checks.
 - `Blueprint -> Build`: 100% required artifact presence.
 - `Build -> Hardening`: 0 active No-Go violations.
 - `Hardening -> Release Candidate`: QA gate pass + DevOps pre-check pass.

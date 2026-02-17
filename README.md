@@ -78,9 +78,22 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 │       ├── hardening/
 │       ├── release/
 │       └── post-release/
+├── domains
+│   ├── INDEX.md
+│   ├── edtech.md
+│   ├── fintech-defi.md
+│   ├── healthtech-senior-care.md
+│   ├── martech-customer-analytics.md
+│   ├── saas-productivity.md
+│   ├── senior-care.md
+│   └── smb-booking.md
 ├── skill-spec
 │   ├── SKILL_SPEC_v1.0.md
 │   └── SKILL_REFACTOR_PLAN_v1.md
+├── templates
+│   ├── decision-matrix.md
+│   ├── scope-pack.md
+│   └── quality-gate-report.md
 └── skills
     ├── architect-decision-matrix/
     ├── architecture-drift-review/
@@ -99,7 +112,9 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 ## Process (Ozet)
 
 1. Blueprint Loop:
-   - Strategist, Analyst, Architect, PM tarafindan immutable kontratlar uretilir.
+   - Loop Master once `Domain Constraint Pre-check` calistirir (`domains/INDEX.md` + secili domain dokumani).
+   - Domain redline uyumsuzlugu varsa surec `BLOCK` olur ve fikir/kapsam duzeltmesi istenir.
+   - Pre-check pass olursa Strategist, Analyst, Architect, PM tarafindan immutable kontratlar uretilir.
 2. Build Loop:
    - Designer + Developer implement eder, No-Go ihlallerinde loop durur.
 3. Hardening Loop:
@@ -153,6 +168,41 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 - Code of conduct: `CODE_OF_CONDUCT.md`
 - Security policy: `SECURITY.md`
 - Changelog: `CHANGELOG.md`
+
+## Templates
+
+- `templates/decision-matrix.md`
+- `templates/scope-pack.md`
+- `templates/quality-gate-report.md`
+
+## Domains
+
+- `domains/INDEX.md` - aktif domain dokumanlari ve versiyonlari
+- `domains/senior-care.md`
+- `domains/smb-booking.md`
+- `domains/healthtech-senior-care.md`
+- `domains/fintech-defi.md`
+- `domains/saas-productivity.md`
+- `domains/martech-customer-analytics.md`
+- `domains/edtech.md`
+
+Not:
+- `domains/` altindaki dokumanlar skill degil, domain beklentilerini tanimlayan referanslardir.
+- Uygulama ciktilari `templates/` dosyalari baz alinip ilgili domain dokumani ile uyarlanir.
+- Her domain dokumani en az su katmanlari icerir: `Regülasyon`, `Persona`, `Hata Tolerans`.
+
+## Quick Start in 5 Minutes
+
+1. Blueprint başlat:
+   - `Loop Master, [fikir] için Blueprint Loop'u strict mode başlat. Domain: [domains/*.md]. Hedef: [...]. Kapsam: [...]. Başarı metriği: [...].`
+2. Mimari kararı al:
+   - `Architect, bu fikir için MVP modunda 2 opsiyonlu decision matrix hazırla ve ilk API/Auth/Data kontrat taslağını üret.`
+3. Scope kilitle:
+   - `PM, scope-pack oluştur; MoSCoW uygula ve Must <= %60 kuralını koru.`
+4. UI kısıtlarını üret:
+   - `Designer, ui-constraints üret; WCAG 2.1 AA ve 375/768/1024/1440 breakpoints zorunlu olsun.`
+5. Sonraki akışı tetikle:
+   - `Developer` -> `QA` -> `Contract` -> `E2E` -> `Security` -> `DevOps` -> `ROI` -> `Drift`
 
 ## License
 

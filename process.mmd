@@ -2,7 +2,10 @@
 
 ```mermaid
 flowchart TD
-    A[Idea / Feature Request] --> B[Blueprint Loop]
+    A[Idea / Feature Request] --> A1[Domain Constraint Pre-check]
+    A1 -->|Pass| B[Blueprint Loop]
+    A1 -->|Block| A2[Refine Idea/Scope]
+    A2 --> A1
     B --> B1[Strategist]
     B1 --> B2[Analyst]
     B2 --> B3[Architect]
@@ -44,4 +47,3 @@ flowchart TD
     N -- No --> B
     N -- Yes --> O[Next Iteration]
 ```
-

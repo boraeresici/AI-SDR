@@ -1,32 +1,35 @@
 # AI-SDR (Software Development Runtime)
 
+Turkish version: `README_TR.md`
+
 [![Repo](https://img.shields.io/badge/Repo-AI--SDR-0A66C2?logo=github)](https://github.com/boraeresici/AI-SDR)
 [![Branch](https://img.shields.io/badge/Branch-main-2EA44F)](https://github.com/boraeresici/AI-SDR/tree/main)
 [![Skill Spec](https://img.shields.io/badge/SKILL__SPEC-v1.0-6f42c1)](skill-spec/SKILL_SPEC_v1.0.md)
-[![Skills](https://img.shields.io/badge/Skills-12-orange)](skills)
+[![Skills](https://img.shields.io/badge/Skills-13-orange)](skills)
 [![A11y](https://img.shields.io/badge/WCAG-2.1_AA-005A9C)](https://www.w3.org/WAI/WCAG21/quickref/)
 [![QA Gate](https://img.shields.io/badge/Coverage-%3E%3D70%25-brightgreen)](skills/qa-quality-gates/SKILL.md)
 [![Simulation](https://img.shields.io/badge/Simulation-Completed-2EA44F)](#simulation-status)
 [![Process Flow](https://img.shields.io/badge/Process_Test-PASS-2EA44F)](#simulation-status)
 [![Production Readiness](https://img.shields.io/badge/Production-NO--GO_(Simulation)-D93025)](#simulation-status)
 
-AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software Design Document) disiplinini zorunlu kilan skill tabanli bir runtime yaklasimidir. Sistem, rol bazli skill'leri orchestrate ederek fikirden canliya gecisi kontrol eder.
+AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SDD (Software Design Document) discipline end-to-end.
 
 ## Simulation Status
 
-- E2E process simulation run completed on `2026-02-17`.
+- E2E process simulation completed on `2026-02-17`.
 - Process orchestration validation: `PASS`.
 - Production release decision in simulation run: `NO-GO` (runtime checks pending).
 
-## Proje Amaci
+## Project Goal
 
-- Faz gecislerini kontrol etmek: `Blueprint -> Build -> Hardening`
-- Mimari, scope, UX, kalite, operasyon ve ROI kararlarini gate modeliyle kilitlemek
-- "Hizli kod + dusuk borc + olculebilir cikti" dengesini standardize etmek
+- Control phase transitions: `Blueprint -> Build -> Hardening`
+- Lock architecture, scope, UX, quality, operations, and ROI decisions with gates
+- Standardize "fast delivery + low debt + measurable output"
 
-## Skill Ekosistemi
+## Skill Ecosystem
 
 - `skills/loop-master-orchestrator/SKILL.md`
+- `skills/idea-alchemist-market-strategist/SKILL.md`
 - `skills/architect-decision-matrix/SKILL.md`
 - `skills/pm-context-scope/SKILL.md`
 - `skills/ux-design-system/SKILL.md`
@@ -39,36 +42,22 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 - `skills/security-review-gate/SKILL.md`
 - `skills/architecture-drift-review/SKILL.md`
 
-### Skill Ozetleri (Tek Cumle)
+## Canonical Standards
 
-- `loop-master-orchestrator`: Faz gecislerini yonetir, gate kontrollerini uygular ve gerekirse rollback karari verir.
-- `architect-decision-matrix`: En az iki mimari opsiyonu agirlikli skorlayarak user onayina sunar.
-- `pm-context-scope`: Scope'u MoSCoW ile netlestirir, AC/DoD uretir ve `Must <= %60` kuralini korur.
-- `ux-design-system`: UI kararlarini token, responsive ve WCAG 2.1 AA kurallariyla standardize eder.
-- `fullstack-implementation-refactor`: Kod uretimini mimari ve kalite kisitlariyla uygular, No-Go ihlalinde kodlamayi durdurur.
-- `qa-quality-gates`: Kritik akis testleri, coverage ve lint kapilariyla release hazirligini olcer.
-- `devops-deployment-stability`: Release/migration riskini denetler ve production icin manuel user onayi zorunlu kilir.
-- `roi-investor-check`: Teknik ciktinin ticari etkisini metriklerle degerlendirip go/no-go karari uretir.
-- `contract-compat-check`: FE/BE API uyumlulugunu kontrol eder ve kirici degisiklikleri release oncesi bloklar.
-- `e2e-execution-gate`: Kritik E2E senaryolarini calistirir, artifact toplar ve fail durumunda release'i durdurur.
-- `security-review-gate`: Guvenlik bulgularini siddet bazli siniflandirir ve yuksek/kritik riskte release'i engeller.
-- `architecture-drift-review`: Release sonrasi mimari sapmalari tespit eder ve duzeltme backlog'unu zorunlu kilar.
+- Skill format standard: `skill-spec/SKILL_SPEC_v1.0.md`
+- Refactor plan: `skill-spec/SKILL_REFACTOR_PLAN_v1.md`
+- Process diagram (render): `process.md`
+- Process source: `process.mmd`
+- User guide: `USERGUIDE.md`
+- Standalone skill usage: `USERGUIDE.md` (`Standalone Skill Calistirma`)
+- Artifact output standard: `artifacts/YYYY-MM-DD/<phase>/`
 
-## Canonical Standartlar
-
-- Skill format standardi: `skill-spec/SKILL_SPEC_v1.0.md`
-- Refactor plani: `skill-spec/SKILL_REFACTOR_PLAN_v1.md`
-- Surec diyagrami (render): `process.md`
-- Surec kaynagi: `process.mmd`
-- Kullanim rehberi: `USERGUIDE.md`
-- Standalone skill kullanimi: `USERGUIDE.md` icinde `Standalone Skill Calistirma`
-- Artifact yazim standardi: `artifacts/YYYY-MM-DD/<phase>/`
-
-## Cleanup Sonrasi Repo Yapisi
+## Repository Structure
 
 ```text
 .
 ├── README.md
+├── README_TR.md
 ├── process.md
 ├── process.mmd
 ├── artifacts
@@ -95,72 +84,33 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 │   ├── scope-pack.md
 │   └── quality-gate-report.md
 └── skills
-    ├── architect-decision-matrix/
-    ├── architecture-drift-review/
-    ├── contract-compat-check/
-    ├── devops-deployment-stability/
-    ├── e2e-execution-gate/
-    ├── fullstack-implementation-refactor/
-    ├── loop-master-orchestrator/
-    ├── pm-context-scope/
-    ├── qa-quality-gates/
-    ├── roi-investor-check/
-    ├── security-review-gate/
-    └── ux-design-system/
+    └── ...
 ```
 
-## Process (Ozet)
+## Process Summary
 
-1. Blueprint Loop:
-   - Loop Master once `Domain Constraint Pre-check` calistirir (`domains/INDEX.md` + secili domain dokumani).
-   - Domain redline uyumsuzlugu varsa surec `BLOCK` olur ve fikir/kapsam duzeltmesi istenir.
-   - Pre-check pass olursa Strategist, Analyst, Architect, PM tarafindan immutable kontratlar uretilir.
-2. Build Loop:
-   - Designer + Developer implement eder, No-Go ihlallerinde loop durur.
-3. Hardening Loop:
-   - QA sonrasi Contract Check, E2E Gate ve Security Gate zorunlu calisir.
-   - Contract fail ise Blueprint'e, E2E/Security fail ise Build'e geri donulur.
-   - DevOps pre-check tamamlanmadan prod onayi istenmez.
-4. ROI Gate:
-   - Teknik cikti is sonucuna baglanir, go/no-go karari verilir.
-5. Runtime Drift Gate:
-   - Production sonrasi architecture drift kontrol edilir; sapma varsa yeniden Blueprint fazina donulur.
-6. Trigger Mapping:
-   - `agent-map.yaml` benzeri routing dis dosyada degil, `loop-master-orchestrator` icine gomulu source-of-truth olarak tutulur.
+1. Idea Maturation:
+   - `Idea Alchemist & Market Strategist` turns raw ideas into strategy-ready inputs.
+2. Blueprint Loop:
+   - Loop Master runs `Domain Constraint Pre-check` using `domains/INDEX.md` + selected domain doc.
+   - If domain redlines fail, process is `BLOCKED` and idea/scope must be refined.
+3. Build Loop:
+   - Designer + Developer execute under quality and architecture constraints.
+4. Hardening Loop:
+   - QA + Contract + E2E + Security + DevOps gates run before release.
+5. ROI + Drift:
+   - ROI decision and post-release architecture drift checks.
 
 ## Process Diagram
 
-- Repo ici referans (render): `process.md`
-- GitHub'da ac: [process.md](./process.md)
-- Yeni sekmede ac: <a href="https://github.com/boraeresici/AI-SDR/blob/main/process.md" target="_blank" rel="noopener noreferrer">Process Diagram (GitHub)</a>
+- Rendered file: `process.md`
+- Open in GitHub: [process.md](./process.md)
 
 ## Artifact Policy
 
-- Skill tanimlari reusable oldugu icin `skills/` altina proje-cikti dosyasi yazilmaz.
-- Tanimlanan tum faz ciktilari proje kokundeki `artifacts/YYYY-MM-DD/<phase>/` altina yazilir.
-- Loop Master her faz gecisinde bu klasorde required artifact varligini dogrular.
-
-## Kritik Karar Kurallari
-
-- Build'e gecis icin minimum artefakt: API Contract + DoD + Auth Scheme + Data Schema
-- PM onceliklendirme: MoSCoW (Must <= %60)
-- UX: WCAG 2.1 AA + breakpoints `375/768/1024/1440`
-- Fullstack No-Go: `any`, type hint eksigi, business logic layer ihlali, N+1
-- QA Gate: Critical path %100, genel coverage >= %70, lint 0
-- Contract Gate: FE/BE contract uyumsuzlugu `0`
-- E2E Gate: Critical senaryolarda fail `0`
-- Security Gate: yuksek/kritik acik varken release bloklanir
-- DevOps: Staging auto; Production migration manuel user onayi + SQL diff
-- ROI: `Technical Debt Ratio = refactor_effort / new_feature_effort`
-
-## Referans URL'ler
-
-- Proje reposu: https://github.com/boraeresici/AI-SDR
-- OpenAPI: https://www.openapis.org/
-- JSON Schema: https://json-schema.org/
-- Mermaid: https://mermaid.js.org/
-- WCAG 2.1 AA: https://www.w3.org/WAI/WCAG21/quickref/
-- MoSCoW Prioritization: https://www.productplan.com/glossary/moscow-prioritization/
+- Skill definitions are reusable, so project-specific outputs are never written under `skills/`.
+- All phase outputs are written under `artifacts/YYYY-MM-DD/<phase>/`.
+- Loop Master validates required artifact presence on each phase transition.
 
 ## Project Docs
 
@@ -177,7 +127,7 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 
 ## Domains
 
-- `domains/INDEX.md` - aktif domain dokumanlari ve versiyonlari
+- `domains/INDEX.md` (active domain docs + versions)
 - `domains/senior-care.md`
 - `domains/smb-booking.md`
 - `domains/healthtech-senior-care.md`
@@ -186,28 +136,19 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 - `domains/martech-customer-analytics.md`
 - `domains/edtech.md`
 
-Not:
-- `domains/` altindaki dokumanlar skill degil, domain beklentilerini tanimlayan referanslardir.
-- Uygulama ciktilari `templates/` dosyalari baz alinip ilgili domain dokumani ile uyarlanir.
-- Her domain dokumani en az su katmanlari icerir: `Regülasyon`, `Persona`, `Hata Tolerans`.
-
 ## Quick Start in 5 Minutes
 
-1. Blueprint başlat:
-   - `Loop Master, [fikir] için Blueprint Loop'u strict mode başlat. Domain: [domains/*.md]. Hedef: [...]. Kapsam: [...]. Başarı metriği: [...].`
-2. Mimari kararı al:
-   - `Architect, bu fikir için MVP modunda 2 opsiyonlu decision matrix hazırla ve ilk API/Auth/Data kontrat taslağını üret.`
-3. Scope kilitle:
-   - `PM, scope-pack oluştur; MoSCoW uygula ve Must <= %60 kuralını koru.`
-4. UI kısıtlarını üret:
-   - `Designer, ui-constraints üret; WCAG 2.1 AA ve 375/768/1024/1440 breakpoints zorunlu olsun.`
-5. Sonraki akışı tetikle:
-   - `Developer` -> `QA` -> `Contract` -> `E2E` -> `Security` -> `DevOps` -> `ROI` -> `Drift`
+1. Start Blueprint:
+   - `Loop Master, start Blueprint Loop in strict mode for [idea]. Domain: [domains/*.md]. Goal: [...]. Scope: [...]. Success metric: [...].`
+2. Run architecture decision:
+   - `Architect, prepare a 2-option MVP decision matrix and initial API/Auth/Data contracts.`
+3. Lock scope:
+   - `PM, produce scope-pack with MoSCoW and keep Must <= 60%.`
+4. Produce UI constraints:
+   - `Designer, generate ui-constraints with WCAG 2.1 AA and 375/768/1024/1440 breakpoints.`
+5. Continue flow:
+   - `Developer -> QA -> Contract -> E2E -> Security -> DevOps -> ROI -> Drift`
 
 ## License
 
-Bu repo `MIT` lisansi ile yayimlanmistir. Detaylar icin `LICENSE` dosyasina bakiniz.
-
-## Kullanım Notu
-
-Yeni skill eklerken veya mevcut skill guncellerken `skill-spec/SKILL_SPEC_v1.0.md` section contract'larina birebir uyulmalıdır.
+This repository is licensed under `MIT`. See `LICENSE`.

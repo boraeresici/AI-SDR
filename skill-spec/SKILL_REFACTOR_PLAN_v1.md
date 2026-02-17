@@ -57,6 +57,12 @@ Not: Asagidaki tum ciktilar proje kokunde `artifacts/YYYY-MM-DD/<phase>/` altina
 - `phase-gate-report.md`
 - `rollback-decision.md` (varsa)
 
+### idea-alchemist-market-strategist
+- `idea-brief.md`
+- `competitive-matrix.md`
+- `brand-identity.md`
+- `business-model-canvas.md`
+
 ### architect-decision-matrix
 - `decision-matrix.md` (2+ opsiyon, agirlikli skor)
 - `architecture-contract.md`

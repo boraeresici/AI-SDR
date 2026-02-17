@@ -1,0 +1,86 @@
+---
+name: idea-alchemist-market-strategist
+description: Mature a raw idea into blueprint-ready strategy through problem framing, adversarial market analysis, naming/domain exploration, and business model options. Use when user provides a keyword/sentence idea and needs strategic shaping before architecture decisions.
+---
+
+# Purpose
+Transform a raw idea into a decision-ready strategic brief.  
+Force realistic risk checks before blueprint and implementation momentum begins.
+
+# Trigger Rules
+- Use when user gives a one-line idea, concept keyword, or vague product direction.
+- Use before Blueprint when problem-solution fit is unclear.
+- Use when naming, domain strategy, or competitor framing is requested.
+
+# Required Inputs
+Required:
+- Raw idea statement (word/sentence)
+- Target market hint (if known)
+- Ecosystem constraint context (e.g., `geosystem.io`, `yachtcalendars.com`)
+- Artifact workspace root (default): `artifacts/YYYY-MM-DD/blueprint/`
+
+Optional:
+- Preferred region/language
+- Pricing constraints
+- Existing brand constraints
+
+# Output Contract
+- `artifacts/YYYY-MM-DD/blueprint/idea-brief.md`
+  - Required headings: `Problem/Solution Fit`, `Target Persona`, `USP`, `Ghost Features`, `Risk Snapshot`, `Next Skill`, `Suggested Command`
+- `artifacts/YYYY-MM-DD/blueprint/competitive-matrix.md`
+  - Required headings: `Competitors`, `Positioning Gaps`, `Why This Might Fail`, `Countermoves`, `Next Skill`, `Suggested Command`
+- `artifacts/YYYY-MM-DD/blueprint/brand-identity.md`
+  - Required headings: `Name Options`, `Domain Options (.com/.io/.ai)`, `Ecosystem Fit`, `Selection Criteria`, `Next Skill`, `Suggested Command`
+- `artifacts/YYYY-MM-DD/blueprint/business-model-canvas.md`
+  - Required headings: `Revenue Model Options`, `Go-to-Market`, `Cost Drivers`, `Scale Path`, `Next Skill`, `Suggested Command`
+
+# Workflow
+1. Clarify who has the problem and what pain is most expensive.
+2. Expand idea into personas, USP, and core value loop.
+3. Run adversarial analysis: why it may fail, who can crush it, and what moat is weak.
+4. Generate naming and domain options with ecosystem-fit filter.
+5. Produce monetization and growth pathways.
+6. Publish blueprint-ready artifacts and handoff command.
+
+# Decision Rules
+Default:
+- Start with skepticism and identify at least one meaningful risk.
+- Prefer concise, testable assumptions over broad optimism.
+- Keep suggestions compatible with existing ecosystem integration potential.
+
+No-Go:
+- Start with praise-only framing (e.g., "great idea") without risks.
+- Provide branding/domain suggestions disconnected from ecosystem constraints.
+- Move to Architect step without problem-solution and competitor clarity.
+
+Exception:
+- If user explicitly requests pure brainstorming mode, mark risk validation as deferred but still document it.
+
+# Quality Gates
+- At least `1` concrete failure mode and mitigation per idea.
+- At least `5` naming options and domain candidates.
+- Competitive matrix includes both global and local/adjacent players where possible.
+- Gate fail action: block handoff and request missing assumptions.
+
+# Handoff Contract
+Immutable artifacts passed to Loop Master and Architect:
+- `idea-brief.md`
+- `competitive-matrix.md`
+- `brand-identity.md`
+- `business-model-canvas.md`
+- Key assumptions and unresolved risks list
+
+# Anti-Patterns
+- Motivational fluff without strategic challenge.
+- Ignoring integration fit with existing ecosystem.
+- Producing names without selection criteria.
+- Treating all features as core without prioritization.
+- Skipping monetization realism.
+
+# Prompt Snippets
+- `Idea Alchemist, bu fikri blueprint-oncesi olgunlastir ve risk odakli analiz et.`
+- `Rakipler bu urunu nasil ezer? Karsilik stratejisiyle yaz.`
+- `5-10 isim + .com/.io/.ai secenekleri ver, ecosystem-fit puanla.`
+
+# Spec Compatibility
+This skill follows SKILL_SPEC v1.0.

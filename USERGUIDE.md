@@ -4,24 +4,25 @@ Bu rehber, AI-SDR skill'lerinin hangi sirayla ve hangi cumle kaliplariyla kullan
 
 ## 1) Hızlı Başlangıç Akışı
 
-1. `loop-master-orchestrator` ile sureci baslat ve domain secimi yap.
-2. `architect-decision-matrix` ile 2+ opsiyon ve onay al.
-3. `pm-context-scope` ile scope/AC/DoD paketini kilitle.
-4. `ux-design-system` ile UI kisitlarini netlestir.
-5. `fullstack-implementation-refactor` ile implement et.
-6. `qa-quality-gates` ile kalite kapilarini gec.
-7. Hardening icinde sirayla:
+1. `idea-alchemist-market-strategist` ile ham fikri olgunlastir.
+2. `loop-master-orchestrator` ile sureci baslat ve domain secimi yap.
+3. `architect-decision-matrix` ile 2+ opsiyon ve onay al.
+4. `pm-context-scope` ile scope/AC/DoD paketini kilitle.
+5. `ux-design-system` ile UI kisitlarini netlestir.
+6. `fullstack-implementation-refactor` ile implement et.
+7. `qa-quality-gates` ile kalite kapilarini gec.
+8. Hardening icinde sirayla:
    - `contract-compat-check`
    - `e2e-execution-gate`
    - `security-review-gate`
-8. `devops-deployment-stability` ile release readiness kontrol et.
-9. `roi-investor-check` ile go/no-go karari ver.
-10. Release sonrasi `architecture-drift-review` calistir.
+9. `devops-deployment-stability` ile release readiness kontrol et.
+10. `roi-investor-check` ile go/no-go karari ver.
+11. Release sonrasi `architecture-drift-review` calistir.
 
 ## 2) Faz Bazlı Kullanım
 
 ### Blueprint Loop
-- Skilller: `loop-master-orchestrator`, `architect-decision-matrix`, `pm-context-scope`
+- Skilller: `idea-alchemist-market-strategist`, `loop-master-orchestrator`, `architect-decision-matrix`, `pm-context-scope`
 - Cikti: onayli kontrat + scope paketi
 - Not: Loop Master bu fazin basinda `Domain Constraint Pre-check` calistirir.
 
@@ -42,6 +43,10 @@ Bu rehber, AI-SDR skill'lerinin hangi sirayla ve hangi cumle kaliplariyla kullan
 ### Orkestrasyon
 - `Loop Master, yeni ozellik icin Blueprint Loop'u strict mode baslat. Domain: domains/INDEX.md uzerinden sec.`
 - `Loop Master, su anki fazi degerlendir ve gate pass/block kararini ver.`
+
+### Fikir Olgunlastirma
+- `Idea Alchemist, [fikir] icin problem-fit, rakip matrisi, isim/domain ve is modeli ciktilari uret.`
+- `Bu fikir neden tutmaz? Rakipler nasil ezer? Karsi stratejiyi yaz.`
 
 ### Mimari Karar
 - `Architect, MVP modu icin 2 opsiyonlu decision matrix cikar ve onay iste.`
@@ -116,20 +121,21 @@ Not:
 
 ## 6) Quick Commands (Copy-Paste)
 
-1. `Loop Master, [fikir/özellik/dosya adı] için Blueprint Loop'u strict mode başlat. Domain: [domains/*.md]. Hedef: [...]. Kapsam: [...]. Başarı metriği: [...].`
+1. `Idea Alchemist, [fikir/ozet] icin strategy mode calistir; idea-brief, competitive-matrix, brand-identity ve business-model-canvas uret.`
+2. `Loop Master, [fikir/özellik/dosya adı] için Blueprint Loop'u strict mode başlat. Domain: [domains/*.md]. Hedef: [...]. Kapsam: [...]. Başarı metriği: [...].`
    Ornek:
    `Loop Master, 60 yaş üstü için hayatı kolaylaştıracak uygulama fikri için Blueprint Loop'u strict mode başlat. Domain: domains/senior-care.md. Hedef: kullanımı kolay, anlaşılır bir uygulama olması ve 60 yaş üstünün rahat kullanabilmesi. Kapsam: ilaç hatırlatma, doktor randevu takibi, acil durumda tek tuşla yakına haber verme, büyük yazı tipi ve sesli yönlendirme. Başarı metriği: 4 hafta içinde pilot kullanıcıların en az %70'i temel görevleri (hatırlatma kurma, randevu ekleme, acil arama) yardımsız tamamlayabilmeli; görev tamamlama süresi ortalama 2 dakikanın altında olmalı; memnuniyet skoru en az 4/5 olmalı.`
-2. `Architect, [özellik adı] için MVP modu bazlı 2 seçenekli decision matrix hazırla ve Onaylıyor musunuz diye sor.`
-3. `PM, [özellik adı] için scope-pack oluştur; MoSCoW uygula ve Must oranını %60 altında tut.`
-4. `Designer, [ekran/akış adı] için ui-constraints üret; WCAG 2.1 AA ve 375/768/1024/1440 breakpoints zorunlu olsun.`
-5. `Developer, [modül/feature adı] için implementation strict mode çalıştır; No-Go ihlali varsa kodlamayı durdur ve raporla.`
-6. `QA, [feature/release] için quality gate çalıştır; critical path %100, coverage >= %70, lint 0 hedefini doğrula.`
-7. `Contract check, [servis/versiyon] için mevcut sürümü önceki OpenAPI ile karşılaştır ve breaking change varsa blokla.`
-8. `E2E gate, [ortam] ortamında [critical/smoke] senaryoları çalıştır ve artifact index üret.`
-9. `Security gate, [release adı] için strict mode çalıştır; HIGH veya CRITICAL bulgu varsa release'i blokla.`
-10. `DevOps, [release adı] için release-readiness ve migration-risk-note hazırla; production apply için SQL diff ile onay iste.`
-11. `Investor check, [feature/release] için infra cost ve technical debt ratio ile go/no-go kararı üret.`
-12. `Architecture drift review, [release/sprint] sonrası sapmaları analiz et ve remediation backlog çıkar.`
+3. `Architect, [özellik adı] için MVP modu bazlı 2 seçenekli decision matrix hazırla ve Onaylıyor musunuz diye sor.`
+4. `PM, [özellik adı] için scope-pack oluştur; MoSCoW uygula ve Must oranını %60 altında tut.`
+5. `Designer, [ekran/akış adı] için ui-constraints üret; WCAG 2.1 AA ve 375/768/1024/1440 breakpoints zorunlu olsun.`
+6. `Developer, [modül/feature adı] için implementation strict mode çalıştır; No-Go ihlali varsa kodlamayı durdur ve raporla.`
+7. `QA, [feature/release] için quality gate çalıştır; critical path %100, coverage >= %70, lint 0 hedefini doğrula.`
+8. `Contract check, [servis/versiyon] için mevcut sürümü önceki OpenAPI ile karşılaştır ve breaking change varsa blokla.`
+9. `E2E gate, [ortam] ortamında [critical/smoke] senaryoları çalıştır ve artifact index üret.`
+10. `Security gate, [release adı] için strict mode çalıştır; HIGH veya CRITICAL bulgu varsa release'i blokla.`
+11. `DevOps, [release adı] için release-readiness ve migration-risk-note hazırla; production apply için SQL diff ile onay iste.`
+12. `Investor check, [feature/release] için infra cost ve technical debt ratio ile go/no-go kararı üret.`
+13. `Architecture drift review, [release/sprint] sonrası sapmaları analiz et ve remediation backlog çıkar.`
 
 ## 7) Standalone Skill Calistirma
 

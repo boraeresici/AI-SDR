@@ -55,6 +55,7 @@ Domain Constraint Pre-check:
 - If idea/feature conflicts with domain redlines, return `BLOCK` with required corrections before Architect step.
 
 Trigger-to-Skill Mapping (embedded):
+- `idea:maturation` -> `idea-alchemist-market-strategist`
 - `hardening:contract-check` -> `contract-compat-check`
 - `hardening:e2e-check` -> `e2e-execution-gate`
 - `hardening:security-check` -> `security-review-gate`
@@ -72,6 +73,7 @@ Default:
 - Architect proposes phase mode weights; user override wins.
 - Trigger-to-skill routing uses the embedded mapping table as source of truth.
 - Domain Constraint Pre-check must pass before Blueprint continues.
+- If idea is raw/underspecified, run `idea:maturation` before Blueprint role checks.
 
 No-Go:
 - Build phase reveals new table or API contract not in blueprint.

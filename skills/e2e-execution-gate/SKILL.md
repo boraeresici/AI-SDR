@@ -23,6 +23,7 @@ Optional:
 - Prior E2E baseline reports
 - Flaky test registry
 - Environment overrides
+- Selected domain reference (`domains/<domain>.md`) for standalone runs
 
 # Input Completion Questions
 - Ask for every missing item from `Required Inputs` before proceeding.
@@ -51,6 +52,7 @@ No-Go:
 - Any failing critical scenario.
 - Missing execution artifacts for failed scenarios.
 - Scenario source modified during run.
+- Standalone execution without domain pre-check evidence from selected domain doc.
 
 Exception:
 - Known flaky non-critical scenarios can be waived only with explicit user approval and follow-up ticket.
@@ -68,6 +70,12 @@ Immutable artifacts passed to QA, DevOps, and Loop Master:
 - Blocker scenario list and retest criteria
 - Release block/unblock decision
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Run only happy-path scenarios for release gate.
 - Ignore flaky tests without tracking and ownership.
@@ -76,10 +84,11 @@ Immutable artifacts passed to QA, DevOps, and Loop Master:
 - Treat environment instability as automatic test pass.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Run E2E gate strict mode for critical scenarios on staging.`
 - `Generate blocker list from failed critical scenarios with artifact links.`
 - `Differentiate regression vs environment noise in E2E failures.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
-
+Skill Version: v1.1.0

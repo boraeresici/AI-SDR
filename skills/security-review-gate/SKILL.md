@@ -23,6 +23,7 @@ Optional:
 - CI security scan links
 - Threat model notes
 - Incident history
+- Selected domain reference (`domains/<domain>.md`) for standalone runs
 
 # Input Completion Questions
 - Ask for every missing item from `Required Inputs` before proceeding.
@@ -61,6 +62,7 @@ No-Go:
 - Any unmitigated `HIGH` or `CRITICAL` finding.
 - Missing risk rationale for accepted findings.
 - Release request without evidence artifacts.
+- Standalone execution without domain pre-check evidence from selected domain doc.
 
 Exception:
 - Temporary acceptance of high risk only with explicit user approval, expiry date, and compensating controls.
@@ -78,6 +80,12 @@ Immutable artifacts passed to DevOps and Loop Master:
 - Accepted-risk references and expiration dates
 - Release block/unblock decision
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Mark a finding resolved without evidence.
 - Treat accepted risks as permanent exemptions.
@@ -86,9 +94,11 @@ Immutable artifacts passed to DevOps and Loop Master:
 - Approve release without severity-based decision logic.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Run security gate strict mode and block on unmitigated HIGH/CRITICAL findings.`
 - `Compare current security posture with previous review and flag regressions.`
 - `Generate remediation priorities with owner and due date hints.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
+Skill Version: v1.1.0

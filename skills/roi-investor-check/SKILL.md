@@ -69,6 +69,12 @@ Immutable artifacts passed to Loop Master and PM:
 - Documented decision conditions
 - Next review trigger and date
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Approve release based only on delivery speed.
 - Ignore infra cost drift because "it works now."
@@ -77,10 +83,12 @@ Immutable artifacts passed to Loop Master and PM:
 - Approve roadmap expansion without capacity impact check.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Run investor-check strict mode with debt ratio and infra cost analysis.`
 - `Produce go/no-go decision with measurable conditions and re-evaluation date.`
 - `Assess whether this feature improves or harms strategic development velocity.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
+Skill Version: v1.1.0
 

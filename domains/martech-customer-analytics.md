@@ -15,21 +15,21 @@ Rule for AI-SDR:
 - Campaign attribution, segmentation, funnel and retention analytics
 - Goal: trustworthy insights with compliant data handling
 
-## Regülasyon Katmanı
+## Regulation Layer
 - Consent and privacy compliance (GDPR/KVKK equivalents) required for customer-level analytics.
 - Personally identifiable fields must be minimized, masked, or pseudonymized.
 
 Rule for AI-SDR:
 - PM/Architect outputs must include consent-source traceability.
 
-## Persona Katmanı
+## Persona Layer
 - Marketer persona: fast insight and campaign actionability.
 - Analyst persona: consistent metric definitions and reproducibility.
 
 Rule for AI-SDR:
 - Glossary and taxonomy must lock metric definitions across modules.
 
-## Hata Tolerans Katmanı
+## Failure Tolerance Layer
 - If event ingestion stalls up to 10s, pipeline must buffer and preserve ordering metadata.
 - Partial ingestion failures must surface data-freshness warnings.
 

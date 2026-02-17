@@ -90,6 +90,12 @@ Immutable artifacts passed to Loop Master and Architect:
 - `artifacts/YYYY-MM-DD/blueprint/market-expectation-snapshot.md`
 - Key assumptions and unresolved risks list
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Motivational fluff without strategic challenge.
 - Ignoring integration fit with existing ecosystem.
@@ -98,6 +104,7 @@ Immutable artifacts passed to Loop Master and Architect:
 - Skipping monetization realism.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Idea Alchemist, bu fikri blueprint-oncesi olgunlastir ve risk odakli analiz et.`
 - `Rakipler bu urunu nasil ezer? Karsilik stratejisiyle yaz.`
 - `5-10 isim + .com/.io/.ai secenekleri ver, ecosystem-fit puanla.`
@@ -105,3 +112,4 @@ Immutable artifacts passed to Loop Master and Architect:
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
+Skill Version: v1.1.0

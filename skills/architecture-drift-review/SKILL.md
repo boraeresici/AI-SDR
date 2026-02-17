@@ -68,6 +68,12 @@ Immutable artifacts passed to Loop Master, Architect, and PM:
 - Risk level classification
 - Next iteration constraints
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Treat repeated hotfix changes as harmless exceptions.
 - Ignore dependency direction changes over time.
@@ -76,10 +82,12 @@ Immutable artifacts passed to Loop Master, Architect, and PM:
 - Start next major build without drift review closure.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Run architecture drift review strict mode against approved baseline.`
 - `Classify drift severity and generate remediation backlog with ownership.`
 - `Decide if drift is acceptable for next iteration or requires Blueprint return.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
+Skill Version: v1.1.0
 

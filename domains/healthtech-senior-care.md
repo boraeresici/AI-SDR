@@ -15,21 +15,21 @@ Rule for AI-SDR:
 - Hybrid domain: healthcare operations for elderly users
 - Goal: safe, understandable, and compliant care-support experiences
 
-## Regülasyon Katmanı
+## Regulation Layer
 - Healthcare workflows must align with medical data privacy requirements (HIPAA-like + KVKK/GDPR context).
 - Access to health data must be role-based and auditable.
 
 Rule for AI-SDR:
 - Security and DevOps outputs must include audit trail and access-control evidence.
 
-## Persona Katmanı
+## Persona Layer
 - Senior persona: 70+ with reduced motor/vision capability.
 - Care team persona: caregiver/relative with emergency duties.
 
 Rule for AI-SDR:
 - UX must prioritize large touch targets, high contrast, and plain language.
 
-## Hata Tolerans Katmanı
+## Failure Tolerance Layer
 - Up to 10s connectivity disruption should not drop critical events.
 - Critical alerts must retry automatically and preserve original timestamp.
 

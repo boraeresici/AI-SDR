@@ -75,6 +75,7 @@ Her skill govdesinde su bolumler bulunur:
 ### Handoff Contract
 - Bir sonraki skill'e aktarilacak immutable artefaktlari listele.
 - Handoff olmadan faz gecisi yapilamaz.
+- Opsiyonel ama onerilen: `Handoff Validation Checklist` alt bolumu eklenir.
 
 ### Anti-Patterns
 - Skill'in yapmamasi gereken 5-10 madde.
@@ -82,10 +83,13 @@ Her skill govdesinde su bolumler bulunur:
 ### Prompt Snippets
 - Model bagimsiz kisa komutlar.
 - En az bir "strict mode" snippet'i ekle.
+- Onerilen: Bir adet `Standalone template` snippet'i ekle.
 
 ### Spec Compatibility
 - Satir formati:
   - `This skill follows SKILL_SPEC v1.0.`
+- Onerilen:
+  - `Skill Version: v1.x.x`
 
 ## 4) Versioning Policy
 

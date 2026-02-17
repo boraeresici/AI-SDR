@@ -23,6 +23,7 @@ Optional:
 - Incident history
 - SLO/SLI targets
 - Rollback playbook
+- Selected domain reference (`domains/<domain>.md`) for standalone runs
 
 # Input Completion Questions
 - Ask for every missing item from `Required Inputs` before proceeding.
@@ -52,6 +53,7 @@ No-Go:
 - Missing SQL diff for production migration.
 - Missing rollback plan for schema-changing release.
 - Attempt production apply without explicit user approval.
+- Standalone execution without domain pre-check evidence from selected domain doc.
 
 Exception:
 - Emergency release path allowed only with explicit user approval and post-release audit requirement.
@@ -69,6 +71,12 @@ Immutable artifacts passed to Loop Master and Investor check:
 - Approval log (requested/granted/denied)
 - Rollback activation steps
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Treat staging success as automatic production approval.
 - Run production migration without SQL diff visibility.
@@ -77,10 +85,11 @@ Immutable artifacts passed to Loop Master and Investor check:
 - Skip security edge checks under time pressure.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Run release readiness strict mode for production with migration risk audit.`
 - `Generate Architect + DevOps pre-check summary before deployment approval request.`
 - `Block apply and list missing artifacts for safe production migration.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
-
+Skill Version: v1.1.0

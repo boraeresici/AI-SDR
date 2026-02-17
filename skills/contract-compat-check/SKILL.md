@@ -23,6 +23,7 @@ Optional:
 - Contract test results
 - Changelog
 - Consumer deprecation timeline
+- Selected domain reference (`domains/<domain>.md`) for standalone runs
 
 # Input Completion Questions
 - Ask for every missing item from `Required Inputs` before proceeding.
@@ -60,6 +61,7 @@ No-Go:
 - Breaking change without versioning strategy.
 - Required field additions that break existing consumers.
 - Contract diff unavailable for changed endpoints.
+- Standalone execution without domain pre-check evidence from selected domain doc.
 
 Exception:
 - Controlled breaking changes allowed only with explicit user approval and migration timeline.
@@ -77,6 +79,12 @@ Immutable artifacts passed to QA, DevOps, and Loop Master:
 - Versioning or migration plan (if required)
 - Release block/unblock decision
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Assume frontend can adapt without explicit migration plan.
 - Hide breaking changes under generic release notes.
@@ -85,9 +93,11 @@ Immutable artifacts passed to QA, DevOps, and Loop Master:
 - Approve release with unresolved ambiguous changes.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Run contract compatibility check strict mode against previous OpenAPI baseline.`
 - `List only breaking changes and required mitigations for release readiness.`
 - `Classify changed endpoints: additive, breaking, ambiguous.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
+Skill Version: v1.1.0

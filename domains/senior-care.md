@@ -15,21 +15,21 @@ Rule for AI-SDR:
 - Target users: 60+ senior users and caregivers
 - Primary goal: low-friction daily support with high trust and reliability
 
-## Regülasyon Katmanı
+## Regulation Layer
 - Health-related personal data must follow regional health/privacy regulations (e.g., KVKK/GDPR equivalents).
 - Sensitive health data must be encrypted at rest and in transit.
 
 Rule for AI-SDR:
 - Architect and DevOps must include encryption, retention, and access logging controls by default.
 
-## Persona Katmanı
+## Persona Layer
 - Primary persona: 70+ senior user with limited digital confidence.
 - Secondary persona: caregiver with urgent-response responsibility.
 
 Rule for AI-SDR:
 - UX and PM outputs must optimize readability, low step-count flows, and explicit guidance.
 
-## Hata Tolerans Katmanı
+## Failure Tolerance Layer
 - If network is offline for up to 10 seconds, critical actions (especially SOS) must be queued locally with timestamp.
 - When connectivity returns, queued SOS event must be transmitted immediately.
 

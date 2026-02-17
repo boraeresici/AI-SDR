@@ -15,21 +15,21 @@ Rule for AI-SDR:
 - Learner, instructor, and guardian workflows
 - Goal: measurable learning progress with inclusive user experience
 
-## Regülasyon Katmanı
+## Regulation Layer
 - Student data privacy must comply with relevant regional regulations.
 - Minor/student records require stricter access control and retention policies.
 
 Rule for AI-SDR:
 - Security outputs must include role-based scope and content access restrictions.
 
-## Persona Katmanı
+## Persona Layer
 - Learner persona: varied digital literacy and accessibility needs.
 - Instructor persona: progress visibility and intervention controls.
 
 Rule for AI-SDR:
 - UX and PM outputs must include accessibility and low-friction learning paths.
 
-## Hata Tolerans Katmanı
+## Failure Tolerance Layer
 - If session drops for up to 10s, learning progress and draft answers must be preserved.
 - Sync conflicts must not overwrite learner progress silently.
 

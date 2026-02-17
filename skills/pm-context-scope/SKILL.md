@@ -68,6 +68,12 @@ Immutable artifacts passed to Designer and Developer:
 - Acceptance criteria and DoD set
 - Declared out-of-scope list
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Convert all stakeholder requests directly into `Must`.
 - Skip out-of-scope declaration.
@@ -76,10 +82,12 @@ Immutable artifacts passed to Designer and Developer:
 - Treat DoD as optional checklist.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Generate scope-pack strict mode with MoSCoW and enforce Must <= 60%.`
 - `Rebalance backlog because Must exceeds capacity. Propose downgrades to Should/Could.`
 - `Add measurable acceptance criteria and DoD for each Must item.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
+Skill Version: v1.1.0
 

@@ -82,6 +82,20 @@ for f in skills/*/SKILL.md; do
     errors=$((errors + 1))
   fi
 
+  # Recommended policy checks promoted by repository standards
+  if ! rg -q 'Standalone template:' "$f"; then
+    echo "ERROR: $f missing Standalone template prompt snippet"
+    errors=$((errors + 1))
+  fi
+  if ! rg -q '^Skill Version: v[0-9]+\.[0-9]+\.[0-9]+' "$f"; then
+    echo "ERROR: $f missing Skill Version marker (Skill Version: vX.Y.Z)"
+    errors=$((errors + 1))
+  fi
+  if ! rg -q '^# Handoff Validation Checklist$' "$f"; then
+    echo "ERROR: $f missing Handoff Validation Checklist section"
+    errors=$((errors + 1))
+  fi
+
 done
 
 if (( errors > 0 )); then

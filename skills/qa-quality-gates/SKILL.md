@@ -23,6 +23,7 @@ Optional:
 - Historical incident data
 - Performance budgets
 - Security test checklist
+- Selected domain reference (`domains/<domain>.md`) for standalone runs
 
 # Input Completion Questions
 - Ask for every missing item from `Required Inputs` before proceeding.
@@ -52,6 +53,7 @@ No-Go:
 - Any failing critical path test.
 - Lint or static analysis errors > 0.
 - Missing regression verification for impacted legacy paths.
+- Standalone execution without domain pre-check evidence from selected domain doc.
 
 Exception:
 - Non-critical test failures can be deferred only with explicit user approval and documented risk acceptance.
@@ -69,6 +71,12 @@ Immutable artifacts passed to DevOps and Loop Master:
 - Explicit pass/fail decision with blocker IDs
 - Approved risk acceptance notes (if any)
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Test only happy path and ignore boundary conditions.
 - Skip regression tests because "feature is isolated."
@@ -77,10 +85,11 @@ Immutable artifacts passed to DevOps and Loop Master:
 - Report pass status without evidence links or logs.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Run QA strict mode: enforce critical path coverage and release gates.`
 - `Generate negative tests for this feature and map each to acceptance criteria.`
 - `Produce release blocker report with remediation priority order.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
-
+Skill Version: v1.1.0

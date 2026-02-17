@@ -16,8 +16,8 @@
   - `agents/claude.yaml`
   - `agents/gemini.yaml`
   - Implemented with provider-agnostic `agents/manifest.yaml` + provider-specific files.
-- [ ] Add a standalone command template line in each skill.
-- [ ] Add domain pre-check precondition to hardening skills when running standalone.
-- [ ] Unify language consistency for section labels referenced from domain docs.
-- [ ] Add per-skill version marker policy aligned with `CHANGELOG.md`.
-- [ ] Add handoff validation checklist in each skill.
+- [x] Add a standalone command template line in each skill.
+- [x] Add domain pre-check precondition to hardening skills when running standalone.
+- [x] Unify language consistency for section labels referenced from domain docs.
+- [x] Add per-skill version marker policy aligned with `CHANGELOG.md`.
+- [x] Add handoff validation checklist in each skill.

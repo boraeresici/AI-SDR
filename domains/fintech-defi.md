@@ -15,21 +15,21 @@ Rule for AI-SDR:
 - Financial transactions, wallets, balances, and settlement flows
 - Goal: secure, deterministic, and auditable transaction processing
 
-## Regülasyon Katmanı
+## Regulation Layer
 - Payment handling must align with PCI-DSS-style constraints.
 - Financial records must maintain immutable audit trails and retention policies.
 
 Rule for AI-SDR:
 - Architect and Security outputs must include tamper-evident logging and key management controls.
 
-## Persona Katmanı
+## Persona Layer
 - End user persona: low-latency transfer expectations, high trust sensitivity.
 - Operator/compliance persona: strict audit, reconciliation, and anomaly visibility.
 
 Rule for AI-SDR:
 - PM must include reconciliation and dispute handling in critical scope.
 
-## Hata Tolerans Katmanı
+## Failure Tolerance Layer
 - If confirmation is delayed beyond 10s, user gets explicit pending state with transaction hash/reference.
 - Duplicate submission must be idempotent and not double-charge.
 

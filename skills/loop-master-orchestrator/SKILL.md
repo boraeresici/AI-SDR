@@ -53,9 +53,9 @@ Domain Constraint Pre-check:
 - Infer/select domain using `domains/INDEX.md`.
 - Load selected domain doc and evaluate:
   - `Requirement Conflict Policy`
-  - `Regülasyon Katmanı`
-  - `Persona Katmanı`
-  - `Hata Tolerans Katmanı`
+  - `Regulation Layer`
+  - `Persona Layer`
+  - `Failure Tolerance Layer`
   - `No-Go List`
 - If idea/feature conflicts with domain redlines, return `BLOCK` with required corrections before Architect step.
 
@@ -104,6 +104,12 @@ Immutable artifacts passed forward:
 - DoD and acceptance criteria
 - Active risk decisions
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Start coding before blueprint contract is complete.
 - Treat advisory feedback as optional when marked blocker.
@@ -112,9 +118,11 @@ Immutable artifacts passed forward:
 - Rewrite immutable artifacts inside downstream phases.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Run Loop Master strict mode. Validate gates and stop on any No-Go.`
 - `Before Build, show missing artifacts and block transition if incomplete.`
 - `Evaluate current state and decide pass/block/rollback with rationale.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
+Skill Version: v1.1.0

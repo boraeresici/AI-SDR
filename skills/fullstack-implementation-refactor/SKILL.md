@@ -71,6 +71,12 @@ Immutable artifacts passed to QA and DevOps:
 - Updated module boundaries (services/hooks/contracts)
 - Explicit list of deferred items (if approved)
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Start coding from memory without scope/contract mapping.
 - Patch logic in UI layer to bypass backend gaps.
@@ -79,10 +85,12 @@ Immutable artifacts passed to QA and DevOps:
 - Add hidden behavior not reflected in acceptance criteria.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Run implementation strict mode and stop on any No-Go violation.`
 - `Refactor this module to move business logic out of view/component layer.`
 - `Audit changed queries for N+1 and propose fixes with related/prefetch usage.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
+Skill Version: v1.1.0
 

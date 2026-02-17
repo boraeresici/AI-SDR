@@ -69,6 +69,12 @@ Immutable artifacts passed to Developer:
 - Accessibility checklist with pass criteria
 - Interaction state definitions
 
+# Handoff Validation Checklist
+- Verify every file listed under Output Contract exists at the declared artifact path.
+- Verify each markdown output includes Next Skill and Suggested Command.
+- Verify gate decision (PASS/BLOCK/NO-GO) is explicit in handoff artifacts.
+- Verify unresolved risks and owner/action are recorded before handoff.
+
 # Anti-Patterns
 - Build screen from scratch without checking existing components.
 - Optimize desktop first and patch mobile later.
@@ -77,10 +83,12 @@ Immutable artifacts passed to Developer:
 - Skip explicit states for loading or failure.
 
 # Prompt Snippets
+- Standalone template: <Skill>, [goal/scope] icin standalone mode calistir. Inputs: [artifact1], [artifact2]. Output path: artifacts/YYYY-MM-DD/<phase>/.
 - `Create ui-constraints strict mode with WCAG 2.1 AA and breakpoint checks.`
 - `List reusable components first, then propose only necessary new components.`
 - `Audit this UI for accessibility and responsive No-Go violations.`
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
+Skill Version: v1.1.0
 

@@ -15,21 +15,21 @@ Rule for AI-SDR:
 - Target users: small business owners and service-booking customers
 - Primary goal: maximize booking conversion with low operational overhead
 
-## Regülasyon Katmanı
+## Regulation Layer
 - Customer PII handling must comply with regional privacy rules (KVKK/GDPR equivalents).
 - Payment-related data must never be stored outside approved boundaries.
 
 Rule for AI-SDR:
 - Security and DevOps outputs must include retention and masking controls.
 
-## Persona Katmanı
+## Persona Layer
 - Owner persona: fast calendar/inventory control, low operational burden.
 - Customer persona: quick booking with minimal form friction.
 
 Rule for AI-SDR:
 - PM and UX outputs must optimize conversion-critical steps and reduce input burden.
 
-## Hata Tolerans Katmanı
+## Failure Tolerance Layer
 - If booking confirmation cannot be returned within 10 seconds, user must get explicit retry/recovery state.
 - Slot-lock failures must degrade gracefully without silent data loss.
 

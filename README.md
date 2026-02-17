@@ -49,13 +49,15 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 
 - Skill format standardi: `skill-spec/SKILL_SPEC_v1.0.md`
 - Refactor plani: `skill-spec/SKILL_REFACTOR_PLAN_v1.md`
-- Surec diyagrami: `process.mmd`
+- Surec diyagrami (render): `process.md`
+- Surec kaynagi: `process.mmd`
 
 ## Cleanup Sonrasi Repo Yapisi
 
 ```text
 .
 ├── README.md
+├── process.md
 ├── process.mmd
 ├── skill-spec
 │   ├── SKILL_SPEC_v1.0.md
@@ -94,9 +96,9 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 
 ## Process Diagram
 
-- Repo ici referans: `process.mmd`
-- GitHub'da ac: [process.mmd](./process.mmd)
-- Yeni sekmede ac: <a href="https://github.com/boraeresici/AI-SDR/blob/main/process.mmd" target="_blank" rel="noopener noreferrer">Process Diagram (GitHub)</a>
+- Repo ici referans (render): `process.md`
+- GitHub'da ac: [process.md](./process.md)
+- Yeni sekmede ac: <a href="https://github.com/boraeresici/AI-SDR/blob/main/process.md" target="_blank" rel="noopener noreferrer">Process Diagram (GitHub)</a>
 
 ## Kritik Karar Kurallari
 

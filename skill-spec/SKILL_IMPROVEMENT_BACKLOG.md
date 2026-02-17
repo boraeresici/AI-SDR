@@ -1,17 +1,21 @@
 # Skill Improvement Backlog
 
 ## P0 (Must)
-- [ ] Standardize `Output Contract` paths to `artifacts/YYYY-MM-DD/<phase>/...` for all skills.
-- [ ] Add `Input Completion Questions` section to every skill and enforce stop-and-ask behavior for missing required inputs.
-- [ ] Strengthen JSON output contracts with typed schema/enums for:
+- [x] Standardize `Output Contract` paths to `artifacts/YYYY-MM-DD/<phase>/...` for all skills.
+- [x] Add `Input Completion Questions` section to every skill and enforce stop-and-ask behavior for missing required inputs.
+- [x] Strengthen JSON output contracts with typed schema/enums for:
   - `skills/contract-compat-check/SKILL.md`
   - `skills/security-review-gate/SKILL.md`
-- [ ] Add automated skill validation:
+- [x] Add automated skill validation:
   - `scripts/validate-skills.sh`
   - `.github/workflows/validate-skills.yml`
 
 ## P1 (Should)
-- [ ] Add `agents/openai.yaml` metadata for all skills (`display_name`, `short_description`, `default_prompt`).
+- [ ] Add multi-provider agent manifests for all skills:
+  - `agents/openai.yaml`
+  - `agents/claude.yaml`
+  - `agents/gemini.yaml`
+  - Or define a provider-agnostic `agents/manifest.yaml` and generate provider-specific files.
 - [ ] Add a standalone command template line in each skill.
 - [ ] Add domain pre-check precondition to hardening skills when running standalone.
 - [ ] Unify language consistency for section labels referenced from domain docs.

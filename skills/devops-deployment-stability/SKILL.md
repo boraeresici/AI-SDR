@@ -1,0 +1,81 @@
+---
+name: devops-deployment-stability
+description: Prepare and validate deployment safety with container hardening, CI/CD controls, migration risk checks, and manual production approval gates. Use when promoting builds to staging/production or evaluating release operational readiness.
+---
+
+# Purpose
+Move software from implementation to reliable runtime operations.  
+Reduce release risk through explicit deployment and migration controls.
+
+# Trigger Rules
+- Use when a build is ready for staging or production deployment.
+- Use when schema migrations are included in a release.
+- Use when infra, security, or runtime stability checks are required.
+
+# Required Inputs
+Required:
+- QA quality gate report
+- Release candidate artifact (image/build identifier)
+- Infrastructure target definition (staging/prod)
+- Migration files and SQL diff summary
+
+Optional:
+- Incident history
+- SLO/SLI targets
+- Rollback playbook
+
+# Output Contract
+- `release-readiness.md`
+  - Required headings: `Release Scope`, `Pre-check Results`, `Security Checks`, `Performance Risk`, `Go/No-Go`, `Approval Status`
+- `migration-risk-note.md`
+  - Required headings: `Migration Summary`, `SQL Diff`, `Lock Risk`, `Rollback Plan`, `Approval Requirement`
+
+# Workflow
+1. Validate QA pass status and release artifact integrity.
+2. Run Architect + DevOps pre-check for infra and migration safety.
+3. Evaluate container, CI/CD, and edge security readiness.
+4. Apply deployment policy by environment (staging/prod).
+5. Produce readiness report and request required approval.
+
+# Decision Rules
+Default:
+- Staging migrations can run automatically through CI/CD.
+- Production migrations require manual user approval.
+- AI must present Architect + DevOps pre-check before asking prod approval.
+
+No-Go:
+- Missing SQL diff for production migration.
+- Missing rollback plan for schema-changing release.
+- Attempt production apply without explicit user approval.
+
+Exception:
+- Emergency release path allowed only with explicit user approval and post-release audit requirement.
+
+# Quality Gates
+- QA status: `PASS` required.
+- Migration safety docs: `100% present` for production.
+- Approval gate: explicit user confirmation required for production apply.
+- Gate fail action: block production deployment and return actionable blocker list.
+
+# Handoff Contract
+Immutable artifacts passed to Loop Master and Investor check:
+- `release-readiness.md`
+- `migration-risk-note.md`
+- Approval log (requested/granted/denied)
+- Rollback activation steps
+
+# Anti-Patterns
+- Treat staging success as automatic production approval.
+- Run production migration without SQL diff visibility.
+- Hide lock or downtime risk assumptions.
+- Deploy without rollback rehearsal notes.
+- Skip security edge checks under time pressure.
+
+# Prompt Snippets
+- `Run release readiness strict mode for production with migration risk audit.`
+- `Generate Architect + DevOps pre-check summary before deployment approval request.`
+- `Block apply and list missing artifacts for safe production migration.`
+
+# Spec Compatibility
+This skill follows SKILL_SPEC v1.0.
+

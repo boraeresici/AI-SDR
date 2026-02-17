@@ -1,0 +1,6 @@
+version: 1
+provider: claude
+skill_name: roi-investor-check
+display_name: "Roi Investor Check"
+short_description: "Evaluate feature and release decisions through business viability, scaling economics, and technical sustainability metrics before final go/no-go"
+default_prompt: "Run Roi Investor Check in strict mode and follow its output contract."

@@ -1,0 +1,6 @@
+version: 1
+provider: gemini
+skill_name: fullstack-implementation-refactor
+display_name: "Fullstack Implementation Refactor"
+short_description: "Implement and refactor backend/frontend code under strict architecture, typing, query, and maintainability constraints with stop-on-violation controls"
+default_prompt: "Run Fullstack Implementation Refactor in strict mode and follow its output contract."

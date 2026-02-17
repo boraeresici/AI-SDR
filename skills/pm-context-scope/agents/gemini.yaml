@@ -1,0 +1,6 @@
+version: 1
+provider: gemini
+skill_name: pm-context-scope
+display_name: "Pm Context Scope"
+short_description: "Convert architecture contracts into scoped, prioritized, and testable delivery context using MoSCoW, measurable acceptance criteria, and Definition of Done controls"
+default_prompt: "Run Pm Context Scope in strict mode and follow its output contract."

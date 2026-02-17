@@ -1,0 +1,6 @@
+version: 1
+provider: claude
+skill_name: security-review-gate
+display_name: "Security Review Gate"
+short_description: "Enforce pre-release security review gates for code and configuration changes with risk classification, actionable findings, and merge/release decisions"
+default_prompt: "Run Security Review Gate in strict mode and follow its output contract."

@@ -1,0 +1,9 @@
+version: 1
+skill_name: qa-quality-gates
+display_name: "Qa Quality Gates"
+short_description: "Define and enforce automated quality gates across critical user flows with coverage thresholds, regression checks, and stop-release criteria"
+default_prompt: "Run Qa Quality Gates in strict mode and follow its output contract."
+providers:
+  - openai
+  - claude
+  - gemini

@@ -1,0 +1,9 @@
+version: 1
+skill_name: devops-deployment-stability
+display_name: "Devops Deployment Stability"
+short_description: "Prepare and validate deployment safety with container hardening, CI/CD controls, migration risk checks, and manual production approval gates"
+default_prompt: "Run Devops Deployment Stability in strict mode and follow its output contract."
+providers:
+  - openai
+  - claude
+  - gemini

@@ -1,0 +1,9 @@
+version: 1
+skill_name: e2e-execution-gate
+display_name: "E2e Execution Gate"
+short_description: "Execute and evaluate end-to-end critical scenarios with artifact-backed pass/fail decisions before release progression"
+default_prompt: "Run E2e Execution Gate in strict mode and follow its output contract."
+providers:
+  - openai
+  - claude
+  - gemini

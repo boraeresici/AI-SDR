@@ -1,0 +1,6 @@
+version: 1
+provider: gemini
+skill_name: architecture-drift-review
+display_name: "Architecture Drift Review"
+short_description: "Detect post-release architectural drift and enforce corrective planning when implementation diverges from approved contracts and boundaries. Use after release or at iteration boundaries to preserve long-term system integrity."
+default_prompt: "Run Architecture Drift Review in strict mode and follow its output contract."

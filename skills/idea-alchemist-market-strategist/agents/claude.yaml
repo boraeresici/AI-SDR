@@ -1,0 +1,6 @@
+version: 1
+provider: claude
+skill_name: idea-alchemist-market-strategist
+display_name: "Idea Alchemist Market Strategist"
+short_description: "Mature a raw idea into blueprint-ready strategy through problem framing, adversarial market analysis, naming/domain exploration, and business model options"
+default_prompt: "Run Idea Alchemist Market Strategist in strict mode and follow its output contract."

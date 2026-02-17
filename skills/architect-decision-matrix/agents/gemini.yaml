@@ -1,0 +1,6 @@
+version: 1
+provider: gemini
+skill_name: architect-decision-matrix
+display_name: "Architect Decision Matrix"
+short_description: "Produce architecture options with weighted decision scoring based on project phase, including stack, auth, data/cache, delivery estimate, and explicit user approval gates"
+default_prompt: "Run Architect Decision Matrix in strict mode and follow its output contract."

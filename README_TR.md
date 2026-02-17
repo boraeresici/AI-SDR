@@ -48,6 +48,7 @@ AI-SDR, vibe coding hizini korurken SDD (Software Design Document) disiplinini z
 - Skill format standardi: `skill-spec/SKILL_SPEC_v1.0.md`
 - Refactor plani: `skill-spec/SKILL_REFACTOR_PLAN_v1.md`
 - Skill iyilestirme backlog'u: `skill-spec/SKILL_IMPROVEMENT_BACKLOG.md`
+- Coklu provider skill manifestleri: `skills/*/agents/{manifest,openai,claude,gemini}.yaml`
 - Surec diyagrami (render): `process.md`
 - Surec kaynagi: `process.mmd`
 - Kullanim rehberi: `USERGUIDE.md`
@@ -73,6 +74,7 @@ AI-SDR, vibe coding hizini korurken SDD (Software Design Document) disiplinini z
 ├── skill-spec
 ├── templates
 └── skills
+    └── <skill-name>/agents/{manifest,openai,claude,gemini}.yaml
 ```
 
 ## Surec Ozeti

@@ -48,6 +48,7 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
 - Skill format standard: `skill-spec/SKILL_SPEC_v1.0.md`
 - Refactor plan: `skill-spec/SKILL_REFACTOR_PLAN_v1.md`
 - Skill improvement backlog: `skill-spec/SKILL_IMPROVEMENT_BACKLOG.md`
+- Multi-provider skill manifests: `skills/*/agents/{manifest,openai,claude,gemini}.yaml`
 - Process diagram (render): `process.md`
 - Process source: `process.mmd`
 - User guide: `USERGUIDE.md`
@@ -93,6 +94,13 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
 │   ├── scope-pack.md
 │   └── quality-gate-report.md
 └── skills
+    ├── <skill-name>/
+    │   ├── SKILL.md
+    │   └── agents/
+    │       ├── manifest.yaml
+    │       ├── openai.yaml
+    │       ├── claude.yaml
+    │       └── gemini.yaml
     └── ...
 ```
 

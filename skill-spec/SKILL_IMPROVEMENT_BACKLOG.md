@@ -11,11 +11,11 @@
   - `.github/workflows/validate-skills.yml`
 
 ## P1 (Should)
-- [ ] Add multi-provider agent manifests for all skills:
+- [x] Add multi-provider agent manifests for all skills:
   - `agents/openai.yaml`
   - `agents/claude.yaml`
   - `agents/gemini.yaml`
-  - Or define a provider-agnostic `agents/manifest.yaml` and generate provider-specific files.
+  - Implemented with provider-agnostic `agents/manifest.yaml` + provider-specific files.
 - [ ] Add a standalone command template line in each skill.
 - [ ] Add domain pre-check precondition to hardening skills when running standalone.
 - [ ] Unify language consistency for section labels referenced from domain docs.

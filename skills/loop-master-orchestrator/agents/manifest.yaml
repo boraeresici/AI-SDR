@@ -1,0 +1,9 @@
+version: 1
+skill_name: loop-master-orchestrator
+display_name: "Loop Master Orchestrator"
+short_description: "Orchestrate SDD phases from blueprint to build to hardening with strict gatekeeping, rollback control, and immutable handoff artifacts"
+default_prompt: "Run Loop Master Orchestrator in strict mode and follow its output contract."
+providers:
+  - openai
+  - claude
+  - gemini

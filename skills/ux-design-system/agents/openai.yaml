@@ -1,0 +1,6 @@
+version: 1
+provider: openai
+skill_name: ux-design-system
+display_name: "Ux Design System"
+short_description: "Enforce consistent UI/UX delivery with design tokens, component reuse, responsive breakpoints, and WCAG 2.1 AA accessibility gates"
+default_prompt: "Run Ux Design System in strict mode and follow its output contract."

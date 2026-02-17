@@ -1,0 +1,6 @@
+version: 1
+provider: claude
+skill_name: contract-compat-check
+display_name: "Contract Compat Check"
+short_description: "Verify frontend-backend API compatibility and detect breaking schema/status changes before release progression"
+default_prompt: "Run Contract Compat Check in strict mode and follow its output contract."

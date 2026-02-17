@@ -6,8 +6,17 @@
 [![Skills](https://img.shields.io/badge/Skills-12-orange)](skills)
 [![A11y](https://img.shields.io/badge/WCAG-2.1_AA-005A9C)](https://www.w3.org/WAI/WCAG21/quickref/)
 [![QA Gate](https://img.shields.io/badge/Coverage-%3E%3D70%25-brightgreen)](skills/qa-quality-gates/SKILL.md)
+[![Simulation](https://img.shields.io/badge/Simulation-Completed-2EA44F)](#simulation-status)
+[![Process Flow](https://img.shields.io/badge/Process_Test-PASS-2EA44F)](#simulation-status)
+[![Production Readiness](https://img.shields.io/badge/Production-NO--GO_(Simulation)-D93025)](#simulation-status)
 
 AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software Design Document) disiplinini zorunlu kilan skill tabanli bir runtime yaklasimidir. Sistem, rol bazli skill'leri orchestrate ederek fikirden canliya gecisi kontrol eder.
+
+## Simulation Status
+
+- E2E process simulation run completed on `2026-02-17`.
+- Process orchestration validation: `PASS`.
+- Production release decision in simulation run: `NO-GO` (runtime checks pending).
 
 ## Proje Amaci
 
@@ -51,6 +60,9 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 - Refactor plani: `skill-spec/SKILL_REFACTOR_PLAN_v1.md`
 - Surec diyagrami (render): `process.md`
 - Surec kaynagi: `process.mmd`
+- Kullanim rehberi: `USERGUIDE.md`
+- Standalone skill kullanimi: `USERGUIDE.md` icinde `Standalone Skill Calistirma`
+- Artifact yazim standardi: `artifacts/YYYY-MM-DD/<phase>/`
 
 ## Cleanup Sonrasi Repo Yapisi
 
@@ -59,6 +71,13 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 ├── README.md
 ├── process.md
 ├── process.mmd
+├── artifacts
+│   └── YYYY-MM-DD
+│       ├── blueprint/
+│       ├── build/
+│       ├── hardening/
+│       ├── release/
+│       └── post-release/
 ├── skill-spec
 │   ├── SKILL_SPEC_v1.0.md
 │   └── SKILL_REFACTOR_PLAN_v1.md
@@ -100,6 +119,12 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 - GitHub'da ac: [process.md](./process.md)
 - Yeni sekmede ac: <a href="https://github.com/boraeresici/AI-SDR/blob/main/process.md" target="_blank" rel="noopener noreferrer">Process Diagram (GitHub)</a>
 
+## Artifact Policy
+
+- Skill tanimlari reusable oldugu icin `skills/` altina proje-cikti dosyasi yazilmaz.
+- Tanimlanan tum faz ciktilari proje kokundeki `artifacts/YYYY-MM-DD/<phase>/` altina yazilir.
+- Loop Master her faz gecisinde bu klasorde required artifact varligini dogrular.
+
 ## Kritik Karar Kurallari
 
 - Build'e gecis icin minimum artefakt: API Contract + DoD + Auth Scheme + Data Schema
@@ -124,4 +149,4 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 
 ## Kullanım Notu
 
-Yeni skill eklerken veya mevcut skill guncellerken `skill-spec/SKILL_SPEC_v1.0.md` section contract'larina birebir uy.
+Yeni skill eklerken veya mevcut skill guncellerken `skill-spec/SKILL_SPEC_v1.0.md` section contract'larina birebir uyulmalıdır.

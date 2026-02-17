@@ -26,7 +26,7 @@ Optional:
 
 # Output Contract
 - `ui-constraints.md`
-  - Required headings: `Design Tokens`, `Component Reuse Plan`, `Responsive Rules`, `Interaction States`, `Accessibility Checklist`, `Do and Don't`
+  - Required headings: `Design Tokens`, `Component Reuse Plan`, `Responsive Rules`, `Interaction States`, `Accessibility Checklist`, `Do and Don't`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Identify target flow and UI surfaces.

@@ -26,9 +26,9 @@ Optional:
 
 # Output Contract
 - `implementation-plan.md`
-  - Required headings: `Scope Mapping`, `Backend Plan`, `Frontend Plan`, `Contract Alignment`, `Risk Controls`
+  - Required headings: `Scope Mapping`, `Backend Plan`, `Frontend Plan`, `Contract Alignment`, `Risk Controls`, `Next Skill`, `Suggested Command`
 - `pr-quality-notes.md`
-  - Required headings: `Implemented Items`, `Refactors`, `No-Go Checks`, `Test Notes`, `Known Tradeoffs`
+  - Required headings: `Implemented Items`, `Refactors`, `No-Go Checks`, `Test Notes`, `Known Tradeoffs`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Map scoped tasks to backend/frontend modules.

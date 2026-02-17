@@ -50,7 +50,9 @@ Her skill govdesinde su bolumler bulunur:
 
 ### Output Contract
 - Ciktiyi dosya adi + format + zorunlu basliklar ile tanimla.
-- Ornek: `decision-matrix.md`, `test-plan.md`, `api-contract.yaml`.
+- Ornek: `artifacts/YYYY-MM-DD/blueprint/decision-matrix.md`, `artifacts/YYYY-MM-DD/hardening/test-plan.md`.
+- Kural: Projeye ozel ciktilar `skills/` altina yazilmaz; her zaman proje kokundeki `artifacts/...` altina yazilir.
+- Kural: Tum markdown ciktilarinin sonunda `Next Skill` ve `Suggested Command` basliklari bulunur.
 
 ### Workflow
 - Sirali adimlar (minimum 4, maksimum 9).
@@ -95,4 +97,3 @@ Her skill icin yayindan once:
 4. Quality gate sayisal mi?
 5. Handoff immutable artefaktlari net mi?
 6. En az 1 `No-Go` kurali var mi?
-

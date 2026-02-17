@@ -26,7 +26,7 @@ Optional:
 
 # Output Contract
 - `security-gate-report.md`
-  - Required headings: `Scope`, `Overall Risk`, `New Findings`, `Resolved Findings`, `Accepted Risks`, `Regression Analysis`, `Decision`
+  - Required headings: `Scope`, `Overall Risk`, `New Findings`, `Resolved Findings`, `Accepted Risks`, `Regression Analysis`, `Decision`, `Next Skill`, `Suggested Command`
 - `security-findings.json`
   - Required keys: `id`, `severity`, `category`, `location`, `impact`, `recommendation`, `status`
 

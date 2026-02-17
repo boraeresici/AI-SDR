@@ -26,7 +26,7 @@ Optional:
 
 # Output Contract
 - `scope-pack.md`
-  - Required headings: `Feature Scope`, `MoSCoW Prioritization`, `User Stories`, `Acceptance Criteria`, `Definition of Done`, `Out of Scope`, `Risks`
+  - Required headings: `Feature Scope`, `MoSCoW Prioritization`, `User Stories`, `Acceptance Criteria`, `Definition of Done`, `Out of Scope`, `Risks`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Read architecture and release objective.

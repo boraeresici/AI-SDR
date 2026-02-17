@@ -51,6 +51,8 @@ Asagidaki kararlar baseline kabul edildi:
 
 ## 3) Skill-by-Skill Output Contracts
 
+Not: Asagidaki tum ciktilar proje kokunde `artifacts/YYYY-MM-DD/<phase>/` altina yazilir.
+
 ### loop-master-orchestrator
 - `phase-gate-report.md`
 - `rollback-decision.md` (varsa)

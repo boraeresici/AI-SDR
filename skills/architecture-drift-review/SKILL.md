@@ -26,9 +26,9 @@ Optional:
 
 # Output Contract
 - `architecture-drift-report.md`
-  - Required headings: `Baseline`, `Detected Drift`, `Impact Assessment`, `Risk Level`, `Corrective Plan`, `Decision`
+  - Required headings: `Baseline`, `Detected Drift`, `Impact Assessment`, `Risk Level`, `Corrective Plan`, `Decision`, `Next Skill`, `Suggested Command`
 - `drift-remediation-backlog.md`
-  - Required headings: `Item`, `Priority`, `Effort`, `Owner`, `Target Iteration`
+  - Required headings: `Item`, `Priority`, `Effort`, `Owner`, `Target Iteration`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Compare current structure against approved architecture baseline.

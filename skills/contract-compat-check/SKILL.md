@@ -26,7 +26,7 @@ Optional:
 
 # Output Contract
 - `contract-compat-report.md`
-  - Required headings: `Compared Versions`, `Breaking Changes`, `Backward-Compatible Changes`, `Ambiguous Changes`, `Decision`, `Required Actions`
+  - Required headings: `Compared Versions`, `Breaking Changes`, `Backward-Compatible Changes`, `Ambiguous Changes`, `Decision`, `Required Actions`, `Next Skill`, `Suggested Command`
 - `contract-diff.json`
   - Required keys: `endpoint`, `change_type`, `compatibility`, `impact`, `required_mitigation`
 

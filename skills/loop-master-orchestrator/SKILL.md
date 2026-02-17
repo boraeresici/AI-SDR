@@ -19,6 +19,7 @@ Required:
 - PM-approved DoD list (3-5 measurable items)
 - Auth/security scheme and role-permission table
 - Data schema diagram (`Mermaid ERD`)
+- Artifact workspace root (default): `artifacts/YYYY-MM-DD/<phase>/`
 
 Optional:
 - Risk register
@@ -27,10 +28,10 @@ Optional:
 - Trigger-to-skill mapping table
 
 # Output Contract
-- `phase-gate-report.md`
-  - Required headings: `Current Phase`, `Gate Checks`, `Decision`, `Blocking Issues`, `Next Step`
-- `rollback-decision.md` (only if rollback triggered)
-  - Required headings: `Trigger`, `Reason`, `Required Blueprint Changes`, `Resume Criteria`
+- `artifacts/YYYY-MM-DD/<phase>/phase-gate-report.md`
+  - Required headings: `Current Phase`, `Gate Checks`, `Decision`, `Blocking Issues`, `Next Step`, `Next Skill`, `Suggested Command`
+- `artifacts/YYYY-MM-DD/<phase>/rollback-decision.md` (only if rollback triggered)
+  - Required headings: `Trigger`, `Reason`, `Required Blueprint Changes`, `Resume Criteria`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Detect requested action and current phase.
@@ -69,6 +70,7 @@ Exception:
 - `Blueprint -> Build`: 100% required artifact presence.
 - `Build -> Hardening`: 0 active No-Go violations.
 - `Hardening -> Release Candidate`: QA gate pass + DevOps pre-check pass.
+- Every phase transition: `required artifacts present?` must be `YES` in `artifacts/YYYY-MM-DD/<phase>/`.
 - Gate fail action: stop execution and return to prior phase with blocking report.
 
 # Handoff Contract

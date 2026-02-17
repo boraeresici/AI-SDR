@@ -26,9 +26,9 @@ Optional:
 
 # Output Contract
 - `e2e-execution-report.md`
-  - Required headings: `Environment`, `Scenario Selector`, `Summary`, `Failed Scenarios`, `Artifacts`, `Decision`
+  - Required headings: `Environment`, `Scenario Selector`, `Summary`, `Failed Scenarios`, `Artifacts`, `Decision`, `Next Skill`, `Suggested Command`
 - `e2e-artifacts-index.md`
-  - Required headings: `Logs`, `Screenshots`, `Videos`, `Failure Details`
+  - Required headings: `Logs`, `Screenshots`, `Videos`, `Failure Details`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Resolve scenario selection from immutable test sources.

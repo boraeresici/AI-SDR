@@ -26,9 +26,9 @@ Optional:
 
 # Output Contract
 - `decision-matrix.md`
-  - Required headings: `Phase`, `Scoring Weights`, `Option A`, `Option B`, `Score Table`, `Tradeoffs`, `Recommendation`, `User Approval`
+  - Required headings: `Phase`, `Scoring Weights`, `Option A`, `Option B`, `Score Table`, `Tradeoffs`, `Recommendation`, `User Approval`, `Next Skill`, `Suggested Command`
 - `architecture-contract.md`
-  - Required headings: `Selected Stack`, `Auth Model`, `Data Model`, `Cache Layer`, `API Contract Plan`, `Risks`, `Migration Notes`
+  - Required headings: `Selected Stack`, `Auth Model`, `Data Model`, `Cache Layer`, `API Contract Plan`, `Risks`, `Migration Notes`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Confirm phase and ask for missing critical constraints.

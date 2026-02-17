@@ -26,9 +26,9 @@ Optional:
 
 # Output Contract
 - `test-plan.md`
-  - Required headings: `Scope Under Test`, `Critical Paths`, `Test Types`, `Negative Scenarios`, `Regression Targets`, `Execution Plan`
+  - Required headings: `Scope Under Test`, `Critical Paths`, `Test Types`, `Negative Scenarios`, `Regression Targets`, `Execution Plan`, `Next Skill`, `Suggested Command`
 - `quality-gate-report.md`
-  - Required headings: `Coverage Results`, `Critical Path Status`, `Lint/Static Analysis`, `Regression Findings`, `Release Decision`, `Blockers`
+  - Required headings: `Coverage Results`, `Critical Path Status`, `Lint/Static Analysis`, `Regression Findings`, `Release Decision`, `Blockers`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Map changed scope to critical paths.

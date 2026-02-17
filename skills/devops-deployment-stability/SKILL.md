@@ -26,9 +26,9 @@ Optional:
 
 # Output Contract
 - `release-readiness.md`
-  - Required headings: `Release Scope`, `Pre-check Results`, `Security Checks`, `Performance Risk`, `Go/No-Go`, `Approval Status`
+  - Required headings: `Release Scope`, `Pre-check Results`, `Security Checks`, `Performance Risk`, `Go/No-Go`, `Approval Status`, `Next Skill`, `Suggested Command`
 - `migration-risk-note.md`
-  - Required headings: `Migration Summary`, `SQL Diff`, `Lock Risk`, `Rollback Plan`, `Approval Requirement`
+  - Required headings: `Migration Summary`, `SQL Diff`, `Lock Risk`, `Rollback Plan`, `Approval Requirement`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Validate QA pass status and release artifact integrity.

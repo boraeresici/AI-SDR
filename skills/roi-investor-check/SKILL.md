@@ -26,9 +26,9 @@ Optional:
 
 # Output Contract
 - `roi-gate-report.md`
-  - Required headings: `Business Objective`, `Cost Profile`, `Debt Profile`, `Velocity Impact`, `Risk Notes`, `Decision Rationale`
+  - Required headings: `Business Objective`, `Cost Profile`, `Debt Profile`, `Velocity Impact`, `Risk Notes`, `Decision Rationale`, `Next Skill`, `Suggested Command`
 - `go-no-go.md`
-  - Required headings: `Decision`, `Conditions`, `Deferred Risks`, `Re-evaluation Date`
+  - Required headings: `Decision`, `Conditions`, `Deferred Risks`, `Re-evaluation Date`, `Next Skill`, `Suggested Command`
 
 # Workflow
 1. Map release scope to intended business outcome.

@@ -121,7 +121,7 @@ Not:
 
 ## 6) Quick Commands (Copy-Paste)
 
-1. `Idea Alchemist, [fikir/ozet] icin strategy mode calistir; idea-brief, competitive-matrix, brand-identity ve business-model-canvas uret.`
+1. `Idea Alchemist, [fikir/ozet] icin strategy mode calistir; artifacts/YYYY-MM-DD/blueprint altina idea-brief, competitive-matrix, brand-identity, business-model-canvas, keyword-brain-map ve market-expectation-snapshot dosyalarini yaz.`
 2. `Loop Master, [fikir/özellik/dosya adı] için Blueprint Loop'u strict mode başlat. Domain: [domains/*.md]. Hedef: [...]. Kapsam: [...]. Başarı metriği: [...].`
    Ornek:
    `Loop Master, 60 yaş üstü için hayatı kolaylaştıracak uygulama fikri için Blueprint Loop'u strict mode başlat. Domain: domains/senior-care.md. Hedef: kullanımı kolay, anlaşılır bir uygulama olması ve 60 yaş üstünün rahat kullanabilmesi. Kapsam: ilaç hatırlatma, doktor randevu takibi, acil durumda tek tuşla yakına haber verme, büyük yazı tipi ve sesli yönlendirme. Başarı metriği: 4 hafta içinde pilot kullanıcıların en az %70'i temel görevleri (hatırlatma kurma, randevu ekleme, acil arama) yardımsız tamamlayabilmeli; görev tamamlama süresi ortalama 2 dakikanın altında olmalı; memnuniyet skoru en az 4/5 olmalı.`

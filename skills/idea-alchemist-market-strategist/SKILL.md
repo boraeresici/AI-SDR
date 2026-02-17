@@ -53,7 +53,8 @@ Optional:
 4. Build competitor matrix with direct, indirect, and substitute products.
 5. Build keyword brain map, then generate naming and domain options with ecosystem-fit filter.
 6. Produce monetization, market expectation, and growth pathways.
-7. Publish blueprint-ready artifacts and handoff command.
+7. Create `artifacts/YYYY-MM-DD/blueprint/` if missing and write every output file physically.
+8. Publish handoff command only after file-write verification.
 
 # Decision Rules
 Default:
@@ -67,6 +68,7 @@ No-Go:
 - Provide branding/domain suggestions disconnected from ecosystem constraints.
 - Move to Architect step without problem-solution and competitor clarity.
 - Provide domain recommendations without extension-fit rationale (trust, B2B, geo, regulation context).
+- Return output only in chat without writing files under `artifacts/YYYY-MM-DD/blueprint/`.
 
 Exception:
 - If user explicitly requests pure brainstorming mode, mark risk validation as deferred but still document it.
@@ -78,6 +80,7 @@ Exception:
 - Include at least `2` direct + `2` indirect competitors and at least `1` substitute behavior.
 - Domain output includes `.com/.io/.ai` plus at least `2` context-fit alternatives (e.g., `.app`, `.health`, `.finance`).
 - Include at least `5` keyword clusters in `keyword-brain-map.md`.
+- Output file presence: `6/6` files exist under `artifacts/YYYY-MM-DD/blueprint/`.
 - Gate fail action: block handoff and request missing assumptions.
 
 # Handoff Contract

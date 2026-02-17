@@ -1,6 +1,7 @@
 # AI-SDR (Software Development Runtime)
 
-English version: `README.md`
+English version: [`README.md`](./README.md)  
+Direct URL: <https://github.com/boraeresici/AI-SDR/blob/main/README.md>
 
 [![Repo](https://img.shields.io/badge/Repo-AI--SDR-0A66C2?logo=github)](https://github.com/boraeresici/AI-SDR)
 [![Branch](https://img.shields.io/badge/Branch-main-2EA44F)](https://github.com/boraeresici/AI-SDR/tree/main)

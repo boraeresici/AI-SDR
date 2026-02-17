@@ -147,6 +147,17 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 - WCAG 2.1 AA: https://www.w3.org/WAI/WCAG21/quickref/
 - MoSCoW Prioritization: https://www.productplan.com/glossary/moscow-prioritization/
 
+## Project Docs
+
+- Contribution guide: `CONTRIBUTING.md`
+- Code of conduct: `CODE_OF_CONDUCT.md`
+- Security policy: `SECURITY.md`
+- Changelog: `CHANGELOG.md`
+
+## License
+
+Bu repo `MIT` lisansi ile yayimlanmistir. Detaylar icin `LICENSE` dosyasina bakiniz.
+
 ## Kullanım Notu
 
 Yeni skill eklerken veya mevcut skill guncellerken `skill-spec/SKILL_SPEC_v1.0.md` section contract'larina birebir uyulmalıdır.

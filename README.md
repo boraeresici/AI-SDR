@@ -30,6 +30,21 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 - `skills/security-review-gate/SKILL.md`
 - `skills/architecture-drift-review/SKILL.md`
 
+### Skill Ozetleri (Tek Cumle)
+
+- `loop-master-orchestrator`: Faz gecislerini yonetir, gate kontrollerini uygular ve gerekirse rollback karari verir.
+- `architect-decision-matrix`: En az iki mimari opsiyonu agirlikli skorlayarak user onayina sunar.
+- `pm-context-scope`: Scope'u MoSCoW ile netlestirir, AC/DoD uretir ve `Must <= %60` kuralini korur.
+- `ux-design-system`: UI kararlarini token, responsive ve WCAG 2.1 AA kurallariyla standardize eder.
+- `fullstack-implementation-refactor`: Kod uretimini mimari ve kalite kisitlariyla uygular, No-Go ihlalinde kodlamayi durdurur.
+- `qa-quality-gates`: Kritik akis testleri, coverage ve lint kapilariyla release hazirligini olcer.
+- `devops-deployment-stability`: Release/migration riskini denetler ve production icin manuel user onayi zorunlu kilir.
+- `roi-investor-check`: Teknik ciktinin ticari etkisini metriklerle degerlendirip go/no-go karari uretir.
+- `contract-compat-check`: FE/BE API uyumlulugunu kontrol eder ve kirici degisiklikleri release oncesi bloklar.
+- `e2e-execution-gate`: Kritik E2E senaryolarini calistirir, artifact toplar ve fail durumunda release'i durdurur.
+- `security-review-gate`: Guvenlik bulgularini siddet bazli siniflandirir ve yuksek/kritik riskte release'i engeller.
+- `architecture-drift-review`: Release sonrasi mimari sapmalari tespit eder ve duzeltme backlog'unu zorunlu kilar.
+
 ## Canonical Standartlar
 
 - Skill format standardi: `skill-spec/SKILL_SPEC_v1.0.md`
@@ -77,103 +92,11 @@ AI-SDR (Software Development Runtime), vibe coding hizini korurken SDD (Software
 6. Trigger Mapping:
    - `agent-map.yaml` benzeri routing dis dosyada degil, `loop-master-orchestrator` icine gomulu source-of-truth olarak tutulur.
 
-## Process Diagram (GitHub Render)
+## Process Diagram
 
-```mermaid
-flowchart TD
-    A[Idea / Feature Request] --> B[Blueprint Loop]
-    B --> B1[Strategist]
-    B1 --> B2[Analyst]
-    B2 --> B3[Architect]
-    B3 --> B4[PM]
-    B4 --> C{Blueprint Gate Pass?}
-
-    C -- No --> B
-    C -- Yes --> D[Build Loop]
-
-    D --> D1[Designer Constraints]
-    D1 --> D2[Developer Implementation]
-    D2 --> D3[No-Go Checks]
-    D3 --> E{Build Gate Pass?}
-
-    E -- No --> B
-    E -- Yes --> F[Hardening Loop]
-
-    F --> F1[QA Quality Gates]
-    F1 --> F1A{Contract Compatible?}
-    F1A -- No --> B
-    F1A -- Yes --> F1B[E2E Execution Gate]
-    F1B --> F1C{E2E Critical Pass?}
-    F1C -- No --> D
-    F1C -- Yes --> F1D[Security Review Gate]
-    F1D --> F1E{Security Risk Acceptable?}
-    F1E -- No --> D
-    F1E -- Yes --> F2[DevOps Pre-check]
-    F2 --> G{Prod Approval by User?}
-
-    G -- No --> H[Block Release]
-    G -- Yes --> I[Release Candidate]
-
-    I --> J[ROI Investor Check]
-    J --> K{Go / No-Go}
-    K -- No-Go --> B
-    K -- Go --> L[Production Runtime]
-    L --> M[Architecture Drift Review]
-    M --> N{Drift Acceptable?}
-    N -- No --> B
-    N -- Yes --> O[Next Iteration]
-```
-
-## Mermaid Usage
-
-Mermaid diyagramlarini markdown dosyalarinda fenced code block ile olustur:
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-Alternatif olarak `:::` bloklari da kullanilabilir:
-
-::: mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-:::
-
-Iconify ikonlari desteklenir:
-
-```mermaid
-architecture-beta
-    service user(mdi:account)
-    service lambda(logos:aws-lambda)
-
-    user:R --> L:lambda
-```
-
-Not: GitHub icin en guvenli format fenced ` ```mermaid ` bloktur.
-
-## Mermaid Navigation ve Configuration
-
-VS Code Markdown Mermaid eklentisi ile:
-- Zoom: `+/-`, `Alt+Scroll`, `Pinch`, `Alt+Click`
-- Pan: `Alt+Drag` veya pan mode
-- Resize: diyagram alt kenarini surukleyerek
-
-Onemli ayarlar:
-- `markdown-mermaid.lightModeTheme`
-- `markdown-mermaid.darkModeTheme`
-- `markdown-mermaid.languages`
-- `markdown-mermaid.mouseNavigation.enabled` (`always|alt|never`)
-- `markdown-mermaid.controls.show` (`never|onHoverOrFocus|always`)
-- `markdown-mermaid.resizable`
-- `markdown-mermaid.maxHeight`
-- `markdown-mermaid.maxTextSize`
+- Repo ici referans: `process.mmd`
+- GitHub'da ac: [process.mmd](./process.mmd)
+- Yeni sekmede ac: <a href="https://github.com/boraeresici/AI-SDR/blob/main/process.mmd" target="_blank" rel="noopener noreferrer">Process Diagram (GitHub)</a>
 
 ## Kritik Karar Kurallari
 

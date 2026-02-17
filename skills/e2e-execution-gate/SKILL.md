@@ -24,10 +24,15 @@ Optional:
 - Flaky test registry
 - Environment overrides
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
-- `e2e-execution-report.md`
+- `artifacts/YYYY-MM-DD/hardening/e2e-execution-report.md`
   - Required headings: `Environment`, `Scenario Selector`, `Summary`, `Failed Scenarios`, `Artifacts`, `Decision`, `Next Skill`, `Suggested Command`
-- `e2e-artifacts-index.md`
+- `artifacts/YYYY-MM-DD/hardening/e2e-artifacts-index.md`
   - Required headings: `Logs`, `Screenshots`, `Videos`, `Failure Details`, `Next Skill`, `Suggested Command`
 
 # Workflow
@@ -58,8 +63,8 @@ Exception:
 
 # Handoff Contract
 Immutable artifacts passed to QA, DevOps, and Loop Master:
-- `e2e-execution-report.md`
-- `e2e-artifacts-index.md`
+- `artifacts/YYYY-MM-DD/hardening/e2e-execution-report.md`
+- `artifacts/YYYY-MM-DD/hardening/e2e-artifacts-index.md`
 - Blocker scenario list and retest criteria
 - Release block/unblock decision
 

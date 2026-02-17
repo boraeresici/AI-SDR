@@ -24,10 +24,15 @@ Optional:
 - Vendor lock-in preference
 - Existing infra constraints
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
-- `decision-matrix.md`
+- `artifacts/YYYY-MM-DD/blueprint/decision-matrix.md`
   - Required headings: `Phase`, `Scoring Weights`, `Option A`, `Option B`, `Score Table`, `Tradeoffs`, `Recommendation`, `User Approval`, `Next Skill`, `Suggested Command`
-- `architecture-contract.md`
+- `artifacts/YYYY-MM-DD/blueprint/architecture-contract.md`
   - Required headings: `Selected Stack`, `Auth Model`, `Data Model`, `Cache Layer`, `API Contract Plan`, `Risks`, `Migration Notes`, `Next Skill`, `Suggested Command`
 
 # Workflow

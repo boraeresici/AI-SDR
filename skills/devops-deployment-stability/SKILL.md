@@ -24,10 +24,15 @@ Optional:
 - SLO/SLI targets
 - Rollback playbook
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
-- `release-readiness.md`
+- `artifacts/YYYY-MM-DD/hardening/release-readiness.md`
   - Required headings: `Release Scope`, `Pre-check Results`, `Security Checks`, `Performance Risk`, `Go/No-Go`, `Approval Status`, `Next Skill`, `Suggested Command`
-- `migration-risk-note.md`
+- `artifacts/YYYY-MM-DD/hardening/migration-risk-note.md`
   - Required headings: `Migration Summary`, `SQL Diff`, `Lock Risk`, `Rollback Plan`, `Approval Requirement`, `Next Skill`, `Suggested Command`
 
 # Workflow
@@ -59,8 +64,8 @@ Exception:
 
 # Handoff Contract
 Immutable artifacts passed to Loop Master and Investor check:
-- `release-readiness.md`
-- `migration-risk-note.md`
+- `artifacts/YYYY-MM-DD/hardening/release-readiness.md`
+- `artifacts/YYYY-MM-DD/hardening/migration-risk-note.md`
 - Approval log (requested/granted/denied)
 - Rollback activation steps
 

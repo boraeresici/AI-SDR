@@ -24,10 +24,15 @@ Optional:
 - Performance budget targets
 - Module-level risk notes
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
-- `implementation-plan.md`
+- `artifacts/YYYY-MM-DD/build/implementation-plan.md`
   - Required headings: `Scope Mapping`, `Backend Plan`, `Frontend Plan`, `Contract Alignment`, `Risk Controls`, `Next Skill`, `Suggested Command`
-- `pr-quality-notes.md`
+- `artifacts/YYYY-MM-DD/build/pr-quality-notes.md`
   - Required headings: `Implemented Items`, `Refactors`, `No-Go Checks`, `Test Notes`, `Known Tradeoffs`, `Next Skill`, `Suggested Command`
 
 # Workflow
@@ -61,8 +66,8 @@ Exception:
 
 # Handoff Contract
 Immutable artifacts passed to QA and DevOps:
-- `implementation-plan.md`
-- `pr-quality-notes.md`
+- `artifacts/YYYY-MM-DD/build/implementation-plan.md`
+- `artifacts/YYYY-MM-DD/build/pr-quality-notes.md`
 - Updated module boundaries (services/hooks/contracts)
 - Explicit list of deferred items (if approved)
 

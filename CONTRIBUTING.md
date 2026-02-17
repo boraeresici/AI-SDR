@@ -11,6 +11,7 @@ Thanks for contributing. This repository uses a skill-first workflow.
    - `SKILL.md` files keep required structure.
    - Output contracts remain consistent with artifact policy.
    - Docs are updated when behavior changes.
+   - Run `bash scripts/validate-skills.sh` and ensure it passes.
 5. Open a Pull Request using the template below.
 
 ## Pull Request Format
@@ -52,4 +53,3 @@ Recommended types:
 - `docs`
 - `refactor`
 - `chore`
-

@@ -24,10 +24,15 @@ Optional:
 - Refactor backlog
 - Performance/incident trends
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
-- `architecture-drift-report.md`
+- `artifacts/YYYY-MM-DD/post-release/architecture-drift-report.md`
   - Required headings: `Baseline`, `Detected Drift`, `Impact Assessment`, `Risk Level`, `Corrective Plan`, `Decision`, `Next Skill`, `Suggested Command`
-- `drift-remediation-backlog.md`
+- `artifacts/YYYY-MM-DD/post-release/drift-remediation-backlog.md`
   - Required headings: `Item`, `Priority`, `Effort`, `Owner`, `Target Iteration`, `Next Skill`, `Suggested Command`
 
 # Workflow
@@ -58,8 +63,8 @@ Exception:
 
 # Handoff Contract
 Immutable artifacts passed to Loop Master, Architect, and PM:
-- `architecture-drift-report.md`
-- `drift-remediation-backlog.md`
+- `artifacts/YYYY-MM-DD/post-release/architecture-drift-report.md`
+- `artifacts/YYYY-MM-DD/post-release/drift-remediation-backlog.md`
 - Risk level classification
 - Next iteration constraints
 

@@ -16,13 +16,18 @@ Force realistic risk checks before blueprint and implementation momentum begins.
 Required:
 - Raw idea statement (word/sentence)
 - Target market hint (if known)
-- Ecosystem constraint context (e.g., `geosystem.io`, `yachtcalendars.com`)
+- Ecosystem constraint context (e.g., `boraeresici.com`, `eresici.com`)
 - Artifact workspace root (default): `artifacts/YYYY-MM-DD/blueprint/`
 
 Optional:
 - Preferred region/language
 - Pricing constraints
 - Existing brand constraints
+
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
 
 # Output Contract
 - `artifacts/YYYY-MM-DD/blueprint/idea-brief.md`
@@ -64,10 +69,10 @@ Exception:
 
 # Handoff Contract
 Immutable artifacts passed to Loop Master and Architect:
-- `idea-brief.md`
-- `competitive-matrix.md`
-- `brand-identity.md`
-- `business-model-canvas.md`
+- `artifacts/YYYY-MM-DD/blueprint/idea-brief.md`
+- `artifacts/YYYY-MM-DD/blueprint/competitive-matrix.md`
+- `artifacts/YYYY-MM-DD/blueprint/brand-identity.md`
+- `artifacts/YYYY-MM-DD/blueprint/business-model-canvas.md`
 - Key assumptions and unresolved risks list
 
 # Anti-Patterns

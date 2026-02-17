@@ -24,10 +24,15 @@ Optional:
 - Churn/retention assumptions
 - Strategic roadmap themes
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
-- `roi-gate-report.md`
+- `artifacts/YYYY-MM-DD/release/roi-gate-report.md`
   - Required headings: `Business Objective`, `Cost Profile`, `Debt Profile`, `Velocity Impact`, `Risk Notes`, `Decision Rationale`, `Next Skill`, `Suggested Command`
-- `go-no-go.md`
+- `artifacts/YYYY-MM-DD/release/go-no-go.md`
   - Required headings: `Decision`, `Conditions`, `Deferred Risks`, `Re-evaluation Date`, `Next Skill`, `Suggested Command`
 
 # Workflow
@@ -52,15 +57,15 @@ Exception:
 - Strategic loss-leader release can proceed only with explicit user approval and time-boxed recovery plan.
 
 # Quality Gates
-- `roi-gate-report.md` and `go-no-go.md` completeness: `100%`.
+- `artifacts/YYYY-MM-DD/release/roi-gate-report.md` and `artifacts/YYYY-MM-DD/release/go-no-go.md` completeness: `100%`.
 - Debt ratio formula must be present and computed for the evaluated scope.
 - Decision must include measurable conditions and re-check date.
 - Gate fail action: return decision as `NO-GO` until missing evidence is provided.
 
 # Handoff Contract
 Immutable artifacts passed to Loop Master and PM:
-- `roi-gate-report.md`
-- `go-no-go.md`
+- `artifacts/YYYY-MM-DD/release/roi-gate-report.md`
+- `artifacts/YYYY-MM-DD/release/go-no-go.md`
 - Documented decision conditions
 - Next review trigger and date
 

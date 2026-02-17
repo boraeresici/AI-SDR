@@ -24,11 +24,25 @@ Optional:
 - Changelog
 - Consumer deprecation timeline
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
-- `contract-compat-report.md`
+- `artifacts/YYYY-MM-DD/hardening/contract-compat-report.md`
   - Required headings: `Compared Versions`, `Breaking Changes`, `Backward-Compatible Changes`, `Ambiguous Changes`, `Decision`, `Required Actions`, `Next Skill`, `Suggested Command`
-- `contract-diff.json`
-  - Required keys: `endpoint`, `change_type`, `compatibility`, `impact`, `required_mitigation`
+- `artifacts/YYYY-MM-DD/hardening/contract-diff.json`
+  - Required schema:
+    - Root type: `array`
+    - Item type: `object`
+    - Required keys: `endpoint`, `method`, `change_type`, `compatibility`, `impact`, `required_mitigation`
+    - `change_type` enum: `request_schema`, `response_schema`, `required_field`, `status_code`, `endpoint_removed`, `endpoint_added`
+    - `compatibility` enum: `breaking`, `additive`, `ambiguous`
+    - `impact` enum: `high`, `medium`, `low`
+    - `required_mitigation` type: `string` (non-empty)
+  - Example item:
+    - `{\"endpoint\":\"/v1/reminders\",\"method\":\"POST\",\"change_type\":\"required_field\",\"compatibility\":\"breaking\",\"impact\":\"high\",\"required_mitigation\":\"Version endpoint to /v2 and provide migration note\"}`
 
 # Workflow
 1. Load current and previous contract versions.
@@ -58,8 +72,8 @@ Exception:
 
 # Handoff Contract
 Immutable artifacts passed to QA, DevOps, and Loop Master:
-- `contract-compat-report.md`
-- `contract-diff.json`
+- `artifacts/YYYY-MM-DD/hardening/contract-compat-report.md`
+- `artifacts/YYYY-MM-DD/hardening/contract-diff.json`
 - Versioning or migration plan (if required)
 - Release block/unblock decision
 
@@ -77,4 +91,3 @@ Immutable artifacts passed to QA, DevOps, and Loop Master:
 
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
-

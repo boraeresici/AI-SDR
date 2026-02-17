@@ -24,8 +24,13 @@ Optional:
 - Previous usability feedback
 - Competitor benchmarks
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
-- `ui-constraints.md`
+- `artifacts/YYYY-MM-DD/build/ui-constraints.md`
   - Required headings: `Design Tokens`, `Component Reuse Plan`, `Responsive Rules`, `Interaction States`, `Accessibility Checklist`, `Do and Don't`, `Next Skill`, `Suggested Command`
 
 # Workflow
@@ -59,7 +64,7 @@ Exception:
 
 # Handoff Contract
 Immutable artifacts passed to Developer:
-- Approved `ui-constraints.md`
+- Approved `artifacts/YYYY-MM-DD/build/ui-constraints.md`
 - Component reuse/new component map
 - Accessibility checklist with pass criteria
 - Interaction state definitions

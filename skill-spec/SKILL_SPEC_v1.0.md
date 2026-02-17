@@ -25,14 +25,15 @@ Her skill govdesinde su bolumler bulunur:
 1. `Purpose`
 2. `Trigger Rules`
 3. `Required Inputs`
-4. `Output Contract`
-5. `Workflow`
-6. `Decision Rules`
-7. `Quality Gates`
-8. `Handoff Contract`
-9. `Anti-Patterns`
-10. `Prompt Snippets`
-11. `Spec Compatibility`
+4. `Input Completion Questions`
+5. `Output Contract`
+6. `Workflow`
+7. `Decision Rules`
+8. `Quality Gates`
+9. `Handoff Contract`
+10. `Anti-Patterns`
+11. `Prompt Snippets`
+12. `Spec Compatibility`
 
 ## 3) Section Contracts
 
@@ -47,6 +48,11 @@ Her skill govdesinde su bolumler bulunur:
 ### Required Inputs
 - `Required` ve `Optional` olarak ayir.
 - Eksik zorunlu girdi varsa skill "stop-and-ask" yapar.
+
+### Input Completion Questions
+- Eksik zorunlu girdiler icin sorulacak net sorulari listeler.
+- Kritik varsayimlar (security/contract/compliance) tahmin edilmez.
+- Tum zorunlu girdiler tamamlanmadan sonraki bolume gecilmez.
 
 ### Output Contract
 - Ciktiyi dosya adi + format + zorunlu basliklar ile tanimla.
@@ -92,7 +98,7 @@ Her skill govdesinde su bolumler bulunur:
 
 Her skill icin yayindan once:
 1. Frontmatter yalnizca `name` + `description` mu?
-2. 11 zorunlu bolum eksiksiz mi?
+2. 12 zorunlu bolum eksiksiz mi?
 3. Trigger ve output test edilebilir mi?
 4. Quality gate sayisal mi?
 5. Handoff immutable artefaktlari net mi?

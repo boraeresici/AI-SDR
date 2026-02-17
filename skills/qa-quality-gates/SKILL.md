@@ -24,10 +24,15 @@ Optional:
 - Performance budgets
 - Security test checklist
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
-- `test-plan.md`
+- `artifacts/YYYY-MM-DD/hardening/test-plan.md`
   - Required headings: `Scope Under Test`, `Critical Paths`, `Test Types`, `Negative Scenarios`, `Regression Targets`, `Execution Plan`, `Next Skill`, `Suggested Command`
-- `quality-gate-report.md`
+- `artifacts/YYYY-MM-DD/hardening/quality-gate-report.md`
   - Required headings: `Coverage Results`, `Critical Path Status`, `Lint/Static Analysis`, `Regression Findings`, `Release Decision`, `Blockers`, `Next Skill`, `Suggested Command`
 
 # Workflow
@@ -59,8 +64,8 @@ Exception:
 
 # Handoff Contract
 Immutable artifacts passed to DevOps and Loop Master:
-- `test-plan.md`
-- `quality-gate-report.md`
+- `artifacts/YYYY-MM-DD/hardening/test-plan.md`
+- `artifacts/YYYY-MM-DD/hardening/quality-gate-report.md`
 - Explicit pass/fail decision with blocker IDs
 - Approved risk acceptance notes (if any)
 

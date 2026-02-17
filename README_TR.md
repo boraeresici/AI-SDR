@@ -47,11 +47,13 @@ AI-SDR, vibe coding hizini korurken SDD (Software Design Document) disiplinini z
 
 - Skill format standardi: `skill-spec/SKILL_SPEC_v1.0.md`
 - Refactor plani: `skill-spec/SKILL_REFACTOR_PLAN_v1.md`
+- Skill iyilestirme backlog'u: `skill-spec/SKILL_IMPROVEMENT_BACKLOG.md`
 - Surec diyagrami (render): `process.md`
 - Surec kaynagi: `process.mmd`
 - Kullanim rehberi: `USERGUIDE.md`
 - Standalone skill kullanimi: `USERGUIDE.md` (`Standalone Skill Calistirma`)
 - Artifact yazim standardi: `artifacts/YYYY-MM-DD/<phase>/`
+- Lokal dogrulama: `bash scripts/validate-skills.sh`
 
 ## Repo Yapisi
 
@@ -59,8 +61,13 @@ AI-SDR, vibe coding hizini korurken SDD (Software Design Document) disiplinini z
 .
 ├── README.md
 ├── README_TR.md
+├── .github
+│   └── workflows/
+│       └── validate-skills.yml
 ├── process.md
 ├── process.mmd
+├── scripts
+│   └── validate-skills.sh
 ├── artifacts
 ├── domains
 ├── skill-spec
@@ -99,6 +106,7 @@ AI-SDR, vibe coding hizini korurken SDD (Software Design Document) disiplinini z
 - Davranis kurallari: `CODE_OF_CONDUCT.md`
 - Guvenlik politikasi: `SECURITY.md`
 - Degisim gunlugu: `CHANGELOG.md`
+- Skill validation workflow: `.github/workflows/validate-skills.yml`
 
 ## Templates
 

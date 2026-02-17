@@ -30,6 +30,11 @@ Optional:
 - Timeline targets
 - Trigger-to-skill mapping table
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
 - `artifacts/YYYY-MM-DD/<phase>/phase-gate-report.md`
   - Required headings: `Current Phase`, `Domain Pre-check`, `Gate Checks`, `Decision`, `Blocking Issues`, `Next Step`, `Next Skill`, `Suggested Command`

@@ -47,11 +47,13 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
 
 - Skill format standard: `skill-spec/SKILL_SPEC_v1.0.md`
 - Refactor plan: `skill-spec/SKILL_REFACTOR_PLAN_v1.md`
+- Skill improvement backlog: `skill-spec/SKILL_IMPROVEMENT_BACKLOG.md`
 - Process diagram (render): `process.md`
 - Process source: `process.mmd`
 - User guide: `USERGUIDE.md`
 - Standalone skill usage: `USERGUIDE.md` (`Standalone Skill Calistirma`)
 - Artifact output standard: `artifacts/YYYY-MM-DD/<phase>/`
+- Local validation: `bash scripts/validate-skills.sh`
 
 ## Repository Structure
 
@@ -59,8 +61,13 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
 .
 ├── README.md
 ├── README_TR.md
+├── .github
+│   └── workflows/
+│       └── validate-skills.yml
 ├── process.md
 ├── process.mmd
+├── scripts
+│   └── validate-skills.sh
 ├── artifacts
 │   └── YYYY-MM-DD
 │       ├── blueprint/
@@ -79,7 +86,8 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
 │   └── smb-booking.md
 ├── skill-spec
 │   ├── SKILL_SPEC_v1.0.md
-│   └── SKILL_REFACTOR_PLAN_v1.md
+│   ├── SKILL_REFACTOR_PLAN_v1.md
+│   └── SKILL_IMPROVEMENT_BACKLOG.md
 ├── templates
 │   ├── decision-matrix.md
 │   ├── scope-pack.md
@@ -119,6 +127,7 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
 - Code of conduct: `CODE_OF_CONDUCT.md`
 - Security policy: `SECURITY.md`
 - Changelog: `CHANGELOG.md`
+- Skill validation workflow: `.github/workflows/validate-skills.yml`
 
 ## Templates
 

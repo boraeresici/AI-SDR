@@ -24,8 +24,13 @@ Optional:
 - Analytics or customer feedback
 - Risk register
 
+# Input Completion Questions
+- Ask for every missing item from `Required Inputs` before proceeding.
+- If any required artifact path is missing, request an exact path under `artifacts/YYYY-MM-DD/<phase>/`.
+- Stop-and-ask until all required inputs are complete; do not infer critical security or contract assumptions.
+
 # Output Contract
-- `scope-pack.md`
+- `artifacts/YYYY-MM-DD/blueprint/scope-pack.md`
   - Required headings: `Feature Scope`, `MoSCoW Prioritization`, `User Stories`, `Acceptance Criteria`, `Definition of Done`, `Out of Scope`, `Risks`, `Next Skill`, `Suggested Command`
 
 # Workflow
@@ -43,7 +48,7 @@ Default:
 - Each feature must have measurable acceptance criteria and DoD items.
 
 No-Go:
-- Start build without approved `scope-pack.md`.
+- Start build without approved `artifacts/YYYY-MM-DD/blueprint/scope-pack.md`.
 - Mark nearly all items as `Must`.
 - Define tasks without acceptance criteria.
 
@@ -58,7 +63,7 @@ Exception:
 
 # Handoff Contract
 Immutable artifacts passed to Designer and Developer:
-- Approved `scope-pack.md`
+- Approved `artifacts/YYYY-MM-DD/blueprint/scope-pack.md`
 - Final prioritized backlog labels (`Must/Should/Could/Won't`)
 - Acceptance criteria and DoD set
 - Declared out-of-scope list

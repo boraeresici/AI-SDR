@@ -6,7 +6,7 @@ Direct URL: <https://github.com/boraeresici/AI-SDR/blob/main/README_TR.md>
 [![Repo](https://img.shields.io/badge/Repo-AI--SDR-0A66C2?logo=github)](https://github.com/boraeresici/AI-SDR)
 [![Branch](https://img.shields.io/badge/Branch-main-2EA44F)](https://github.com/boraeresici/AI-SDR/tree/main)
 [![Skill Spec](https://img.shields.io/badge/SKILL__SPEC-v1.0-6f42c1)](skill-spec/SKILL_SPEC_v1.0.md)
-[![Skills](https://img.shields.io/badge/Skills-13-orange)](skills)
+[![Skills](https://img.shields.io/badge/Skills-14-orange)](skills)
 [![A11y](https://img.shields.io/badge/WCAG-2.1_AA-005A9C)](https://www.w3.org/WAI/WCAG21/quickref/)
 [![QA Gate](https://img.shields.io/badge/Coverage-%3E%3D70%25-brightgreen)](skills/qa-quality-gates/SKILL.md)
 [![Simulation](https://img.shields.io/badge/Simulation-Completed-2EA44F)](#simulation-status)
@@ -31,6 +31,7 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
 
 - `skills/loop-master-orchestrator/SKILL.md`
 - `skills/idea-alchemist-market-strategist/SKILL.md`
+- `skills/reverse-engineering-reference-architect/SKILL.md`
 - `skills/architect-decision-matrix/SKILL.md`
 - `skills/pm-context-scope/SKILL.md`
 - `skills/ux-design-system/SKILL.md`
@@ -71,6 +72,7 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
 │   └── validate-skills.sh
 ├── artifacts
 │   └── YYYY-MM-DD
+│       ├── research/
 │       ├── blueprint/
 │       ├── build/
 │       ├── hardening/
@@ -108,14 +110,16 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
 
 1. Idea Maturation:
    - `Idea Alchemist & Market Strategist` turns raw ideas into strategy-ready inputs.
-2. Blueprint Loop:
+2. Research Loop (Optional):
+   - `Reverse Engineering & Reference Architect` deconstructs reference repos/docs into adaptation-ready artifacts.
+3. Blueprint Loop:
    - Loop Master runs `Domain Constraint Pre-check` using `domains/INDEX.md` + selected domain doc.
    - If domain redlines fail, process is `BLOCKED` and idea/scope must be refined.
-3. Build Loop:
+4. Build Loop:
    - Designer + Developer execute under quality and architecture constraints.
-4. Hardening Loop:
+5. Hardening Loop:
    - QA + Contract + E2E + Security + DevOps gates run before release.
-5. ROI + Drift:
+6. ROI + Drift:
    - ROI decision and post-release architecture drift checks.
 
 ## Process Diagram

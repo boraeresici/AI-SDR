@@ -5,19 +5,20 @@ Bu rehber, AI-SDR skill'lerinin hangi sirayla ve hangi cumle kaliplariyla kullan
 ## 1) Hızlı Başlangıç Akışı
 
 1. `idea-alchemist-market-strategist` ile ham fikri olgunlastir.
-2. `loop-master-orchestrator` ile sureci baslat ve domain secimi yap.
-3. `architect-decision-matrix` ile 2+ opsiyon ve onay al.
-4. `pm-context-scope` ile scope/AC/DoD paketini kilitle.
-5. `ux-design-system` ile UI kisitlarini netlestir.
-6. `fullstack-implementation-refactor` ile implement et.
-7. `qa-quality-gates` ile kalite kapilarini gec.
-8. Hardening icinde sirayla:
+2. (Opsiyonel) `reverse-engineering-reference-architect` ile referans repo/dokuman analizi yap.
+3. `loop-master-orchestrator` ile sureci baslat ve domain secimi yap.
+4. `architect-decision-matrix` ile 2+ opsiyon ve onay al.
+5. `pm-context-scope` ile scope/AC/DoD paketini kilitle.
+6. `ux-design-system` ile UI kisitlarini netlestir.
+7. `fullstack-implementation-refactor` ile implement et.
+8. `qa-quality-gates` ile kalite kapilarini gec.
+9. Hardening icinde sirayla:
    - `contract-compat-check`
    - `e2e-execution-gate`
    - `security-review-gate`
-9. `devops-deployment-stability` ile release readiness kontrol et.
-10. `roi-investor-check` ile go/no-go karari ver.
-11. Release sonrasi `architecture-drift-review` calistir.
+10. `devops-deployment-stability` ile release readiness kontrol et.
+11. `roi-investor-check` ile go/no-go karari ver.
+12. Release sonrasi `architecture-drift-review` calistir.
 
 ## 2) Faz Bazlı Kullanım
 
@@ -25,6 +26,11 @@ Bu rehber, AI-SDR skill'lerinin hangi sirayla ve hangi cumle kaliplariyla kullan
 - Skilller: `idea-alchemist-market-strategist`, `loop-master-orchestrator`, `architect-decision-matrix`, `pm-context-scope`
 - Cikti: onayli kontrat + scope paketi
 - Not: Loop Master bu fazin basinda `Domain Constraint Pre-check` calistirir.
+
+### Research Loop (Opsiyonel)
+- Skilller: `reverse-engineering-reference-architect`
+- Cikti: referans deconstruction + role-adaptation paketleri
+- Not: Ciktilar `artifacts/YYYY-MM-DD/research/` altina yazilir.
 
 ### Build Loop
 - Skilller: `ux-design-system`, `fullstack-implementation-refactor`
@@ -51,6 +57,10 @@ Bu rehber, AI-SDR skill'lerinin hangi sirayla ve hangi cumle kaliplariyla kullan
 ### Mimari Karar
 - `Architect, MVP modu icin 2 opsiyonlu decision matrix cikar ve onay iste.`
 - `Architect, Scale/Prod moduna gec ve agirliklari yeniden hesapla.`
+
+### Reverse Engineering
+- `Reverse Engineering, [reference_source] icin full mode calistir; focus_modules=[...], target_stack=[...].`
+- `Referans modulu deconstruct et ve Architect + Developer adaptation block hazirla.`
 
 ### Scope ve PM
 - `PM, bu ozelligi MoSCoW ile parcala ve Must oranini %60 altinda tut.`

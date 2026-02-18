@@ -61,6 +61,7 @@ Domain Constraint Pre-check:
 
 Trigger-to-Skill Mapping (embedded):
 - `idea:maturation` -> `idea-alchemist-market-strategist`
+- `research:reference-deconstruct` -> `reverse-engineering-reference-architect`
 - `hardening:contract-check` -> `contract-compat-check`
 - `hardening:e2e-check` -> `e2e-execution-gate`
 - `hardening:security-check` -> `security-review-gate`

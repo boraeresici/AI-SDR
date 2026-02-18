@@ -6,7 +6,7 @@ Direct URL: <https://github.com/boraeresici/AI-SDR/blob/main/README.md>
 [![Repo](https://img.shields.io/badge/Repo-AI--SDR-0A66C2?logo=github)](https://github.com/boraeresici/AI-SDR)
 [![Branch](https://img.shields.io/badge/Branch-main-2EA44F)](https://github.com/boraeresici/AI-SDR/tree/main)
 [![Skill Spec](https://img.shields.io/badge/SKILL__SPEC-v1.0-6f42c1)](skill-spec/SKILL_SPEC_v1.0.md)
-[![Skills](https://img.shields.io/badge/Skills-13-orange)](skills)
+[![Skills](https://img.shields.io/badge/Skills-14-orange)](skills)
 [![A11y](https://img.shields.io/badge/WCAG-2.1_AA-005A9C)](https://www.w3.org/WAI/WCAG21/quickref/)
 [![QA Gate](https://img.shields.io/badge/Coverage-%3E%3D70%25-brightgreen)](skills/qa-quality-gates/SKILL.md)
 [![Simulation](https://img.shields.io/badge/Simulation-Completed-2EA44F)](#simulation-status)
@@ -31,6 +31,7 @@ AI-SDR, vibe coding hizini korurken SDD (Software Design Document) disiplinini z
 
 - `skills/loop-master-orchestrator/SKILL.md`
 - `skills/idea-alchemist-market-strategist/SKILL.md`
+- `skills/reverse-engineering-reference-architect/SKILL.md`
 - `skills/architect-decision-matrix/SKILL.md`
 - `skills/pm-context-scope/SKILL.md`
 - `skills/ux-design-system/SKILL.md`
@@ -70,6 +71,13 @@ AI-SDR, vibe coding hizini korurken SDD (Software Design Document) disiplinini z
 ├── scripts
 │   └── validate-skills.sh
 ├── artifacts
+│   └── YYYY-MM-DD
+│       ├── research/
+│       ├── blueprint/
+│       ├── build/
+│       ├── hardening/
+│       ├── release/
+│       └── post-release/
 ├── domains
 ├── skill-spec
 ├── templates
@@ -81,14 +89,16 @@ AI-SDR, vibe coding hizini korurken SDD (Software Design Document) disiplinini z
 
 1. Fikir Olgunlastirma:
    - `Idea Alchemist & Market Strategist` ham fikri stratejiye hazirlar.
-2. Blueprint Loop:
+2. Research Loop (Opsiyonel):
+   - `Reverse Engineering & Reference Architect` referans repo/dokumanlari deconstruct ederek uyarlama paketleri uretir.
+3. Blueprint Loop:
    - Loop Master, `domains/INDEX.md` + secili domain dokumani ile `Domain Constraint Pre-check` calistirir.
    - Domain redline fail olursa surec `BLOCK` olur.
-3. Build Loop:
+4. Build Loop:
    - Designer + Developer kisitli ve denetlenebilir sekilde uygular.
-4. Hardening Loop:
+5. Hardening Loop:
    - QA + Contract + E2E + Security + DevOps gate'leri tamamlanir.
-5. ROI + Drift:
+6. ROI + Drift:
    - ROI karari ve release sonrasi mimari sapma kontrolu yapilir.
 
 ## Process Diagram

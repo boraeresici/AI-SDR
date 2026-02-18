@@ -3,7 +3,10 @@
 ```mermaid
 flowchart TD
     A[Idea / Feature Request] --> A0[Idea Alchemist & Market Strategist]
-    A0 --> A1[Domain Constraint Pre-check]
+    A0 --> R{Reference Analysis Needed?}
+    R -- Yes --> R1[Research Loop<br/>Reverse Engineering & Reference Architect]
+    R1 --> A1[Domain Constraint Pre-check]
+    R -- No --> A1
     A1 -->|Pass| B[Blueprint Loop]
     A1 -->|Block| A2[Refine Idea/Scope]
     A2 --> A0

@@ -1,0 +1,6 @@
+version: 1
+provider: openai
+skill_name: reverse-engineering-reference-architect
+display_name: "Reverse Engineering Reference Architect"
+short_description: "Analyze reference repos/docs and produce evidence-based adaptation inputs for Architect, PM, Developer, and DevOps without code copy"
+default_prompt: "Run Reverse Engineering Reference Architect in strict mode and follow its output contract."

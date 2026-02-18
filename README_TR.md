@@ -26,6 +26,8 @@ AI-SDR, vibe coding hizini korurken SDD (Software Design Document) disiplinini z
 - Faz gecislerini kontrol etmek: `Blueprint -> Build -> Hardening`
 - Mimari, kapsam, UX, kalite, operasyon ve ROI kararlarini gate modeliyle kilitlemek
 - "hizli teslimat + dusuk teknik borc + olculebilir cikti" standardi kurmak
+- `Modular monolith` yaklasimi ile baslayip, olcek/maliyet guardrail'leriyle planli microservice gecis yollari tanimlamak
+- Commodity alanlarda (auth, notification, payment) `buy-over-build` yaklasimi ve kontrollu dependency yonetimi uygulamak
 
 ## Skill Ekosistemi
 
@@ -100,6 +102,12 @@ AI-SDR, vibe coding hizini korurken SDD (Software Design Document) disiplinini z
    - QA + Contract + E2E + Security + DevOps gate'leri tamamlanir.
 6. ROI + Drift:
    - ROI karari ve release sonrasi mimari sapma kontrolu yapilir.
+
+## Mimari Prensipler
+
+- FE/BE secimi trendle degil olculebilir performans ve operasyon maliyetiyle yapilir.
+- Commodity yeteneklerde once kendini kanitlamis kutuphane/servis tercih edilir; custom kod gerekcesi yazilir.
+- Her yeni dependency icin security, maintenance, performance ve lock-in etkisi dokumante edilir.
 
 ## Process Diagram
 

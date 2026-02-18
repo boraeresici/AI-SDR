@@ -26,6 +26,8 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
 - Control phase transitions: `Blueprint -> Build -> Hardening`
 - Lock architecture, scope, UX, quality, operations, and ROI decisions with gates
 - Standardize "fast delivery + low debt + measurable output"
+- Prefer `modular monolith` with planned microservice extraction paths, backed by scaling and cost guardrails
+- Prioritize `performance-aware library selection` and `buy-over-build` for commodity modules (auth, notifications, payments), with controlled dependency governance
 
 ## Skill Ecosystem
 
@@ -121,6 +123,12 @@ AI-SDR is a skill-driven runtime that keeps vibe-coding speed while enforcing SD
    - QA + Contract + E2E + Security + DevOps gates run before release.
 6. ROI + Drift:
    - ROI decision and post-release architecture drift checks.
+
+## Architecture Principles
+
+- Choose FE/BE frameworks by measurable performance and operational cost, not trend bias.
+- For commodity capabilities, prefer proven libraries/services before custom implementation.
+- Every new dependency must include security, maintenance, performance, and lock-in impact notes.
 
 ## Process Diagram
 

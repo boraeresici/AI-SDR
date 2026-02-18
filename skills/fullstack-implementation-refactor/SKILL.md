@@ -48,12 +48,17 @@ Default:
 - Business logic belongs in `services.py` (backend) or custom hooks/use-cases (frontend), not views/components.
 - API responses follow contract and consistent error shape.
 - Strong typing required in Python and TypeScript.
+- Implement by module boundaries first (`domain/application/integration`) to preserve future service extraction paths.
+- Keep critical capabilities reusable with stable interfaces to enable cross-project packaging.
+- For auth and other commodity concerns, integrate proven/popular libraries first and document why custom code is needed if selected.
 
 No-Go:
 - TypeScript `any` usage in production code.
 - Missing Python type hints in function signatures.
 - Business logic directly in view/component layer.
 - N+1 query risk without `select_related` / `prefetch_related`.
+- Cross-module direct coupling that bypasses declared service/contract boundaries.
+- Introducing new dependencies without performance, maintenance, and security impact notes.
 
 Exception:
 - Temporary technical debt allowed only with explicit user approval and a dated cleanup task in output notes.
@@ -62,6 +67,7 @@ Exception:
 - No-Go violations: `0` (hard blocker).
 - Contract mismatch count: `0` for required endpoints.
 - Lint/type checks: `100% pass` for changed modules.
+- Modular boundary violations: `0` in changed scope.
 - Gate fail action: stop coding, emit violation report, and require fix before continuation.
 
 # Handoff Contract
@@ -93,4 +99,3 @@ Immutable artifacts passed to QA and DevOps:
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
 Skill Version: v1.1.0
-

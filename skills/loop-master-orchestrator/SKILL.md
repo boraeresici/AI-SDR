@@ -80,11 +80,14 @@ Default:
 - Trigger-to-skill routing uses the embedded mapping table as source of truth.
 - Domain Constraint Pre-check must pass before Blueprint continues.
 - If idea is raw/underspecified, run `idea:maturation` before Blueprint role checks.
+- Blueprint artifacts must include modular boundaries, scaling assumptions, and cost guardrails.
+- Critical capabilities should be declared as reusable modules when cross-project reuse is expected.
 
 No-Go:
 - Build phase reveals new table or API contract not in blueprint.
 - Security/auth design undefined.
 - DoD missing or non-measurable.
+- Architecture lacks extraction seams and creates lock-in coupling for future microservice transition.
 
 Exception:
 - Emergency hotfix path allowed only if user explicitly approves reduced gates.

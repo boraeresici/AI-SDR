@@ -15,6 +15,12 @@ All notable changes to AI-SDR docs/specs/skills are listed here.
 
 - `README.md` includes simulation status and artifact policy references.
 - Skill output contracts include `Next Skill` and `Suggested Command` continuity fields.
+- Added `Reverse Engineering & Reference Architect` skill and optional `Research Loop` to docs/process.
+- Architecture guidance now enforces:
+  - modular-monolith-first with planned microservice extraction
+  - performance-first framework/library decisions
+  - buy-over-build for commodity modules (especially auth)
+  - controlled dependency governance (security/maintenance/perf/lock-in notes)
 - All skills now include:
   - `Standalone template` prompt snippet
   - `Handoff Validation Checklist`

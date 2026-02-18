@@ -57,6 +57,7 @@ Bu rehber, AI-SDR skill'lerinin hangi sirayla ve hangi cumle kaliplariyla kullan
 ### Mimari Karar
 - `Architect, MVP modu icin 2 opsiyonlu decision matrix cikar ve onay iste.`
 - `Architect, Scale/Prod moduna gec ve agirliklari yeniden hesapla.`
+- `Architect, FE secimi icin Next.js ve Inertia.js opsiyonlarini performans/maliyet tablosuyla kiyasla; auth icin buy-vs-build oner.`
 
 ### Reverse Engineering
 - `Reverse Engineering, [reference_source] icin full mode calistir; focus_modules=[...], target_stack=[...].`
@@ -102,6 +103,8 @@ Bu rehber, AI-SDR skill'lerinin hangi sirayla ve hangi cumle kaliplariyla kullan
 - Prod migration sadece user onayi ile uygulanmalidir.
 - Tum skill ciktilari immutable referans olarak bir sonraki faza aktarilmalidir.
 - Artifact dosyalari `skills/` altina yazilmaz; proje kokunde `artifacts/` altina yazilir.
+- Auth gibi commodity moduller icin once proven kutuphane/servis secenegi degerlendirilir; custom implementasyon gerekcesiz acilmaz.
+- Yeni kutuphane eklemelerinde dependency notu zorunludur: security riski, maintenance durumu, performans etkisi, lock-in riski.
 
 ## 4.1) Artifact Dizin Standardi
 

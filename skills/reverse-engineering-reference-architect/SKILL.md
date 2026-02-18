@@ -61,6 +61,8 @@ Default:
 - Use evidence-backed reasoning for all major claims.
 - Prefer conceptual adaptation over implementation cloning.
 - Keep output role-targeted and directly actionable.
+- Prioritize modular adaptation that can start as monolith modules and later split into microservices with minimal rewrite.
+- Include scaling and cost impact notes for every recommended adoption path.
 
 No-Go:
 - Copy/paste reference code into output artifacts.
@@ -76,6 +78,7 @@ Exception:
 - Every major finding includes `Evidence`, `Confidence`, and `Assumption`.
 - Classification coverage: each key pattern must be labeled `Do Directly`, `Adapt`, or `Reject`.
 - License compliance rule is explicitly documented in `reference-gap-analysis.md`.
+- Adaptation pack includes reusable-module candidates for cross-project use.
 - Gate fail action: block handoff and return missing evidence/compliance items.
 
 # Handoff Contract

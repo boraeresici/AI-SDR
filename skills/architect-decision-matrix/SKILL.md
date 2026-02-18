@@ -46,11 +46,19 @@ Optional:
 Default scoring:
 - `MVP`: Time-to-market 40, Cost 30, Scalability 15, Security 15
 - `Scale/Prod`: Scalability 35, Security 30, Cost 20, Time-to-market 15
+- Prefer `modular monolith` as default delivery shape unless clear scaling evidence requires early service split.
+- Define explicit bounded contexts and extraction seams so critical modules can be moved to microservices later.
+- Favor reusable core capabilities (auth, notification, billing, scheduling) with clean contracts for cross-project reuse.
+- Evaluate FE delivery options by runtime/perf/ops cost (e.g., `Next.js` vs `Inertia.js`) instead of framework preference bias.
+- Prefer proven libraries/services for non-core domains (especially auth) before custom implementation.
 
 No-Go:
 - Present only one option.
 - Skip auth/security model.
 - Proceed to build without user approval.
+- Propose microservices without cost/operational model justification.
+- Accept architecture with tight coupling that blocks future service extraction.
+- Rebuild commodity modules from scratch without a documented buy-vs-build rationale.
 
 Exception:
 - User can override phase and force alternate weights; this override has highest priority.
@@ -59,6 +67,7 @@ Exception:
 - Minimum options: `>= 2`
 - Each option must include: stack, auth, DB/cache, estimate, risk notes.
 - Decision report must include weighted score table.
+- Each option must include `scaling plan`, `cost profile`, and `service-extraction roadmap`.
 - Gate fail action: regenerate matrix before handoff.
 
 # Handoff Contract
@@ -90,4 +99,3 @@ Pass immutable artifacts to PM and Loop Master:
 # Spec Compatibility
 This skill follows SKILL_SPEC v1.0.
 Skill Version: v1.1.0
-
